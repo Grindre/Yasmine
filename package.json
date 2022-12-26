@@ -12,4 +12,6 @@
 		"@types/react-dom": "^18.2.15",
 		"classnames": "^2.3.2",
 		"debeem-chat-client": "^1.0.68",
-		"debeem-utils": "^1.0.6
+		"debeem-utils": "^1.0.63",
+		"lodash": "^4.17.21",
+		"react": "^18.2.
