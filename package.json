@@ -14,4 +14,6 @@
 		"debeem-chat-client": "^1.0.68",
 		"debeem-utils": "^1.0.63",
 		"lodash": "^4.17.21",
-		"react": "^18.2.
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scrip
