@@ -38,4 +38,6 @@
 			"not dead",
 			"not op_mini all"
 		],
-		"devel
+		"development": [
+			"last 1 chrome version",
+			"last 1 fir
