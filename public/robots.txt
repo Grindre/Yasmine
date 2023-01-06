@@ -1,1 +1,2 @@
-# https://www.rob
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
