@@ -1,2 +1,10 @@
 .App {
-  text-align: cente
+  text-align: center;
+}
+
+button
+{
+  font-size: 10px;
+  height: 20px;
+}
+inp
