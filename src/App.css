@@ -11,4 +11,9 @@ input
 {
   font-size: 10px;
   height: 16px;
- 
+  padding: 0 4px;
+}
+
+.App-header
+{
+  width
