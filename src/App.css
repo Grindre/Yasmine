@@ -34,4 +34,7 @@ input
 }
 .App-header .userDiv
 {
- 
+  float: left;
+  width: 200px;
+}
+
