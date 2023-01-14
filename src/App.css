@@ -25,4 +25,8 @@ input
   color: #FFFFFF;
   font-size: 12px;
   font-weight: 800;
-  box-sizing: bord
+  box-sizing: border-box;
+}
+.App-header .serverDiv
+{
+  float: 
