@@ -42,4 +42,8 @@ input
 .App-body
 {
   font-size: 12px;
-  text-ali
+  text-align: left;
+  display: flex;
+  height: 100vh;
+}
+.App-body 
