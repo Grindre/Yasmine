@@ -46,4 +46,7 @@ input
   display: flex;
   height: 100vh;
 }
-.App-body 
+.App-body .RoomColumn
+{
+  width: 140px;
+  backgrou
