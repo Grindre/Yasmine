@@ -29,4 +29,9 @@ input
 }
 .App-header .serverDiv
 {
-  float: 
+  float: left;
+  width: 160px;
+}
+.App-header .userDiv
+{
+ 
