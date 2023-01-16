@@ -49,4 +49,6 @@ input
 .App-body .RoomColumn
 {
   width: 140px;
-  backgrou
+  background-color: deepskyblue;
+  overflow-y: auto;
+  overflow
