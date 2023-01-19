@@ -51,4 +51,10 @@ input
   width: 140px;
   background-color: deepskyblue;
   overflow-y: auto;
-  overflow
+  overflow-x: hidden;
+}
+
+
+.sticky-top {
+  position: sticky;
+  top: 0;
