@@ -61,4 +61,9 @@ input
   z-index: 1;
 }
 .sticky-bottom {
-  position: stic
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.App
