@@ -66,4 +66,7 @@ input
   z-index: 1;
 }
 
-.App
+.App-body .ChatColumn
+{
+  flex-grow: 1;
+  overflow-y
