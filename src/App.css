@@ -69,4 +69,10 @@ input
 .App-body .ChatColumn
 {
   flex-grow: 1;
-  overflow-y
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.App-link {
+  color: #61d
