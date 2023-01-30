@@ -80,4 +80,7 @@ input
 
 @keyframes App-logo-spin {
   from {
-    trans
+    transform: rotate(0deg);
+  }
+  to {
+    
