@@ -75,4 +75,9 @@ input
 
 
 .App-link {
-  color: #61d
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    trans
