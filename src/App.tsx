@@ -5,4 +5,8 @@ import { RoomList } from "./components/RoomList/RoomList";
 import { UserService } from "./services/UserService";
 
 
-export int
+export interface AppProps
+{
+}
+
+export interfac
