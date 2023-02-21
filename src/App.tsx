@@ -12,4 +12,7 @@ export interface AppProps
 export interface AppState
 {
 	selectedUserId : number;
-	selectedServ
+	selectedServer : string;
+}
+
+export const defaultServ
