@@ -15,4 +15,6 @@ export interface AppState
 	selectedServer : string;
 }
 
-export const defaultServ
+export const defaultServer = 'localhost:6616';
+
+export class App 
