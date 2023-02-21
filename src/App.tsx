@@ -9,4 +9,7 @@ export interface AppProps
 {
 }
 
-export interfac
+export interface AppState
+{
+	selectedUserId : number;
+	selectedServ
