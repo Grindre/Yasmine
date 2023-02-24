@@ -17,4 +17,4 @@ export interface AppState
 
 export const defaultServer = 'localhost:6616';
 
-export class App 
+export class App extends React.Component<AppProps, AppState
