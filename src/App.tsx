@@ -19,4 +19,7 @@ export const defaultServer = 'localhost:6616';
 
 export class App extends React.Component<AppProps, AppState>
 {
-	private userService = new UserService()
+	private userService = new UserService();
+
+	refRoomList : React.RefObject<any>;
+	refChatMe
