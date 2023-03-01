@@ -22,4 +22,6 @@ export class App extends React.Component<AppProps, AppState>
 	private userService = new UserService();
 
 	refRoomList : React.RefObject<any>;
-	refChatMe
+	refChatMessageList : React.RefObject<any>;
+
+	constructor( pr
