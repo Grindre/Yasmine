@@ -24,4 +24,8 @@ export class App extends React.Component<AppProps, AppState>
 	refRoomList : React.RefObject<any>;
 	refChatMessageList : React.RefObject<any>;
 
-	constructor( pr
+	constructor( props : any )
+	{
+		super( props );
+		this.state = {
+			se
