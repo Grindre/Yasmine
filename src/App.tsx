@@ -29,4 +29,7 @@ export class App extends React.Component<AppProps, AppState>
 		super( props );
 		this.state = {
 			selectedUserId : 1,
-			selectedServer
+			selectedServer : this.loadServerAddress(),
+		};
+
+		//	...
