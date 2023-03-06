@@ -40,4 +40,4 @@ export class App extends React.Component<AppProps, AppState>
 		this.onSwitchRoom = this.onSwitchRoom.bind( this );
 		this.onNewMessageArrived = this.onNewMessageArrived.bind( this );
 		this.onSelectServerChanged = this.onSelectServerChanged.bind( this );
-		this.onSel
+		this.onSelectUserChanged = this.onSelectUserChanged.bind( this 
