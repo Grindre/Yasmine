@@ -37,4 +37,5 @@ export class App extends React.Component<AppProps, AppState>
 		this.refChatMessageList = React.createRef();
 
 		//	...
-		this.onSwitchRoom =
+		this.onSwitchRoom = this.onSwitchRoom.bind( this );
+		this.o
