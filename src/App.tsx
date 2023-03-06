@@ -38,4 +38,4 @@ export class App extends React.Component<AppProps, AppState>
 
 		//	...
 		this.onSwitchRoom = this.onSwitchRoom.bind( this );
-		this.o
+		this.onNewMessageArrived = this.onNewMessageArrived.bind( thi
