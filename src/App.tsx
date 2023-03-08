@@ -46,3 +46,8 @@ export class App extends React.Component<AppProps, AppState>
 	componentDidMount()
 	{
 		this.initSelectedServer();
+		this.initSelectedUser();
+	}
+
+
+	public loa
