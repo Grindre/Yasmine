@@ -50,4 +50,6 @@ export class App extends React.Component<AppProps, AppState>
 	}
 
 
-	public loa
+	public loadServerAddress() : string
+	{
+		return localStora
