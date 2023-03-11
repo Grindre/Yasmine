@@ -58,4 +58,6 @@ export class App extends React.Component<AppProps, AppState>
 	{
 		let server : string = this.loadServerAddress();
 
-		console.log( `initSelectedServer ser
+		console.log( `initSelectedServer server :`, server );
+		this.setState({
+			sele
