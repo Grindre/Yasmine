@@ -55,4 +55,5 @@ export class App extends React.Component<AppProps, AppState>
 		return localStorage.getItem( `current.server` ) || defaultServer;
 	}
 	private initSelectedServer()
-	
+	{
+		let server : string = this.loadServerAddress(
