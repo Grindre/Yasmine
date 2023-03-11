@@ -52,4 +52,4 @@ export class App extends React.Component<AppProps, AppState>
 
 	public loadServerAddress() : string
 	{
-		return localStora
+		return localStorage.getItem( `current.server` ) || d
