@@ -60,4 +60,8 @@ export class App extends React.Component<AppProps, AppState>
 
 		console.log( `initSelectedServer server :`, server );
 		this.setState({
-			sele
+			selectedServer : server,
+		});
+	}
+
+	private initS
