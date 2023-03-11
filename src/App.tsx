@@ -64,4 +64,6 @@ export class App extends React.Component<AppProps, AppState>
 		});
 	}
 
-	private initS
+	private initSelectedUser()
+	{
+		const userId : number = this.userSe
