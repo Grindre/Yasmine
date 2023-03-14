@@ -68,4 +68,9 @@ export class App extends React.Component<AppProps, AppState>
 	{
 		const userId : number = this.userService.getUserId();
 		console.log( `initSelectedUser userId :`, userId );
-		this.setSta
+		this.setState({
+			selectedUserId : userId,
+		});
+	}
+
+	onSw
