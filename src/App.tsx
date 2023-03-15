@@ -73,4 +73,6 @@ export class App extends React.Component<AppProps, AppState>
 		});
 	}
 
-	onSw
+	onSwitchRoom( roomId : string )
+	{
+		console.log( `🐹🐹🐹 App::o
