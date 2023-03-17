@@ -75,4 +75,6 @@ export class App extends React.Component<AppProps, AppState>
 
 	onSwitchRoom( roomId : string )
 	{
-		console.log( `🐹🐹🐹 App::o
+		console.log( `🐹🐹🐹 App::onRoomChanged :`, roomId );
+
+		const childInstanc
