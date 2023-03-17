@@ -78,4 +78,4 @@ export class App extends React.Component<AppProps, AppState>
 		console.log( `🐹🐹🐹 App::onRoomChanged :`, roomId );
 
 		const childInstance = this.refChatMessageList.current;
-		child
+		childInstance.asyncLoad( roomId ).then( ( res : bo
