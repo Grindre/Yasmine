@@ -80,4 +80,6 @@ export class App extends React.Component<AppProps, AppState>
 		const childInstance = this.refChatMessageList.current;
 		childInstance.asyncLoad( roomId ).then( ( res : boolean ) =>
 		{
-			console.log( `App::onRoomChanged ChatMessageList.asyncLoa
+			console.log( `App::onRoomChanged ChatMessageList.asyncLoad :`, res );
+		}).catch( ( err : any ) =>
+		{
