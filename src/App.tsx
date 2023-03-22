@@ -83,3 +83,4 @@ export class App extends React.Component<AppProps, AppState>
 			console.log( `App::onRoomChanged ChatMessageList.asyncLoad :`, res );
 		}).catch( ( err : any ) =>
 		{
+			console.error( `App::onRoomChanged err: `, err 
