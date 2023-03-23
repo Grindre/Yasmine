@@ -89,4 +89,4 @@ export class App extends React.Component<AppProps, AppState>
 
 	onNewMessageArrived()
 	{
-		console.log(
+		console.log( `🍆🍆🍆 App::onNewMessageArrived ${ new Date().t
