@@ -89,4 +89,5 @@ export class App extends React.Component<AppProps, AppState>
 
 	onNewMessageArrived()
 	{
-		console.log( `🍆🍆🍆 App::onNewMessageArrived ${ new Date().t
+		console.log( `🍆🍆🍆 App::onNewMessageArrived ${ new Date().toLocaleString() }` );
+		const childInstance = t
