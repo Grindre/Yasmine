@@ -90,4 +90,5 @@ export class App extends React.Component<AppProps, AppState>
 	onNewMessageArrived()
 	{
 		console.log( `🍆🍆🍆 App::onNewMessageArrived ${ new Date().toLocaleString() }` );
-		const childInstance = t
+		const childInstance = this.refRoomList.current;
+		childInstance.loadRoom
