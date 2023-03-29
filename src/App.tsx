@@ -91,4 +91,7 @@ export class App extends React.Component<AppProps, AppState>
 	{
 		console.log( `🍆🍆🍆 App::onNewMessageArrived ${ new Date().toLocaleString() }` );
 		const childInstance = this.refRoomList.current;
-		childInstance.loadRoom
+		childInstance.loadRooms();
+	}
+
+	onSelectServerChanged( e : any )
