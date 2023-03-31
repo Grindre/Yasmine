@@ -96,4 +96,9 @@ export class App extends React.Component<AppProps, AppState>
 
 	onSelectServerChanged( e : any )
 	{
-		const server : string = String( e.target.value 
+		const server : string = String( e.target.value );
+		this.setState({
+			selectedServer : server,
+		});
+
+		//
