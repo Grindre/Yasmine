@@ -101,4 +101,5 @@ export class App extends React.Component<AppProps, AppState>
 			selectedServer : server,
 		});
 
-		//
+		//	save to localStorage
+		localStorage.setItem( `curr
