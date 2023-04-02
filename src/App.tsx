@@ -108,4 +108,9 @@ export class App extends React.Component<AppProps, AppState>
 		{
 			window.location.reload();
 
-		}, 300 )
+		}, 300 );
+	}
+
+	onSelectUserChanged( e : any )
+	{
+		const userId :
