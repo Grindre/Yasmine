@@ -104,4 +104,8 @@ export class App extends React.Component<AppProps, AppState>
 		//	save to localStorage
 		localStorage.setItem( `current.server`, server );
 
-		setTimeout( () 
+		setTimeout( () =>
+		{
+			window.location.reload();
+
+		}, 300 )
