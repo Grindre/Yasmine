@@ -113,4 +113,4 @@ export class App extends React.Component<AppProps, AppState>
 
 	onSelectUserChanged( e : any )
 	{
-		const userId :
+		const userId : number = parseInt( e.target.value );
