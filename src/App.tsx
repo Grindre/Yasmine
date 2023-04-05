@@ -115,4 +115,8 @@ export class App extends React.Component<AppProps, AppState>
 	{
 		const userId : number = parseInt( e.target.value );
 		this.setState({
-			selectedUserId 
+			selectedUserId : userId,
+		});
+
+		//	...
+		const childChatMessageList = th
