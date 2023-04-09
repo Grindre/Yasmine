@@ -119,4 +119,5 @@ export class App extends React.Component<AppProps, AppState>
 		});
 
 		//	...
-		const childChatMessageList = th
+		const childChatMessageList = this.refChatMessageList.current;
+		childChatMess
