@@ -120,4 +120,6 @@ export class App extends React.Component<AppProps, AppState>
 
 		//	...
 		const childChatMessageList = this.refChatMessageList.current;
-		childChatMess
+		childChatMessageList.setUser( userId );
+
+		setTimeout( () 
