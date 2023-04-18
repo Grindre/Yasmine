@@ -125,4 +125,5 @@ export class App extends React.Component<AppProps, AppState>
 		setTimeout( () =>
 		{
 			//	...
-			const childRoomList =
+			const childRoomList = this.refRoomList.current;
+			childRoomList.loadRooms();
