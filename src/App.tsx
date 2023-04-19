@@ -127,3 +127,12 @@ export class App extends React.Component<AppProps, AppState>
 			//	...
 			const childRoomList = this.refRoomList.current;
 			childRoomList.loadRooms();
+
+		}, 300 );
+	}
+
+
+	render()
+	{
+		return (
+			<div 
