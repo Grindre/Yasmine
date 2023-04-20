@@ -136,4 +136,6 @@ export class App extends React.Component<AppProps, AppState>
 	{
 		return (
 			<div className="App">
-				<div className="App-header
+				<div className="App-header sticky-top">
+					<div className="serverDiv">
+			
