@@ -135,4 +135,5 @@ export class App extends React.Component<AppProps, AppState>
 	render()
 	{
 		return (
-			<div 
+			<div className="App">
+				<div className="App-header
