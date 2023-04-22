@@ -138,4 +138,5 @@ export class App extends React.Component<AppProps, AppState>
 			<div className="App">
 				<div className="App-header sticky-top">
 					<div className="serverDiv">
-						<select value={ this.state.selectedServer } on
+						<select value={ this.state.selectedServer } onChange={ this.onSelectServerChanged } >
+							<op
