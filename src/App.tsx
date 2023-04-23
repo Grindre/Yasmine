@@ -141,4 +141,5 @@ export class App extends React.Component<AppProps, AppState>
 						<select value={ this.state.selectedServer } onChange={ this.onSelectServerChanged } >
 							<option value={ defaultServer }>{ defaultServer }</option>
 							<option value="40.81.205.197:6616">JPE1-40.81.205.197:6616</option>
-							<option value="20.243.160.34
+							<option value="20.243.160.34:6616">JPE2-20.243.160.34:6616</option>
+						</
