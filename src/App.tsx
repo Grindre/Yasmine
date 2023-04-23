@@ -146,4 +146,4 @@ export class App extends React.Component<AppProps, AppState>
 					</div>
 					<div className="userDiv">
 						I am : &nbsp;
-						<
+						<select value={ this.state.select
