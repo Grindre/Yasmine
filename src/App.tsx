@@ -139,4 +139,5 @@ export class App extends React.Component<AppProps, AppState>
 				<div className="App-header sticky-top">
 					<div className="serverDiv">
 						<select value={ this.state.selectedServer } onChange={ this.onSelectServerChanged } >
-							<option value={ defaultServer }>{ defaultSe
+							<option value={ defaultServer }>{ defaultServer }</option>
+							<option value="40.81.20
