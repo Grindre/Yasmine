@@ -146,4 +146,5 @@ export class App extends React.Component<AppProps, AppState>
 					</div>
 					<div className="userDiv">
 						I am : &nbsp;
-						<select value={ this.state.selectedUserId } onChange={ this.onSelectUserChanged }
+						<select value={ this.state.selectedUserId } onChange={ this.onSelectUserChanged } >
+							<option value={1}>Alice</opti
