@@ -149,3 +149,6 @@ export class App extends React.Component<AppProps, AppState>
 						<select value={ this.state.selectedUserId } onChange={ this.onSelectUserChanged } >
 							<option value={1}>Alice</option>
 							<option value={2}>Bob</option>
+							<option value={3}>Mary</option>
+						</select>
+			
