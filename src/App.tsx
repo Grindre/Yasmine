@@ -154,4 +154,5 @@ export class App extends React.Component<AppProps, AppState>
 					</div>
 				</div>
 				<div className="App-body">
-					<div 
+					<div className="RoomColumn">
+					
