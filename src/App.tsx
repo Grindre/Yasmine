@@ -155,4 +155,6 @@ export class App extends React.Component<AppProps, AppState>
 				</div>
 				<div className="App-body">
 					<div className="RoomColumn">
-					
+						<RoomList
+							ref={this.refRoomList}
+							callbackOnRoo
