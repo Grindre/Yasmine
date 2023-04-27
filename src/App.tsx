@@ -151,4 +151,7 @@ export class App extends React.Component<AppProps, AppState>
 							<option value={2}>Bob</option>
 							<option value={3}>Mary</option>
 						</select>
-			
+					</div>
+				</div>
+				<div className="App-body">
+					<div 
