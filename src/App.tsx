@@ -157,4 +157,5 @@ export class App extends React.Component<AppProps, AppState>
 					<div className="RoomColumn">
 						<RoomList
 							ref={this.refRoomList}
-							callbackOnRoo
+							callbackOnRoomChanged={ this.onSwitchRoom }
+						
