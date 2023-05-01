@@ -163,4 +163,5 @@ export class App extends React.Component<AppProps, AppState>
 					<div className="ChatColumn">
 						<ChatMessageList
 							ref={this.refChatMessageList}
-							serverUrl={ this.
+							serverUrl={ this.state.selectedServer }
+							callbackOnMessageArrived={ this.onN
