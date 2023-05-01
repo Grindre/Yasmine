@@ -161,4 +161,5 @@ export class App extends React.Component<AppProps, AppState>
 						/>
 					</div>
 					<div className="ChatColumn">
-			
+						<ChatMessageList
+							ref={this.
