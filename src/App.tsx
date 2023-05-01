@@ -158,4 +158,7 @@ export class App extends React.Component<AppProps, AppState>
 						<RoomList
 							ref={this.refRoomList}
 							callbackOnRoomChanged={ this.onSwitchRoom }
-						
+						/>
+					</div>
+					<div className="ChatColumn">
+			
