@@ -164,4 +164,8 @@ export class App extends React.Component<AppProps, AppState>
 						<ChatMessageList
 							ref={this.refChatMessageList}
 							serverUrl={ this.state.selectedServer }
-							callbackOnMessageArrived={ this.onN
+							callbackOnMessageArrived={ this.onNewMessageArrived }
+						/>
+					</div>
+				</div>
+			
