@@ -168,4 +168,7 @@ export class App extends React.Component<AppProps, AppState>
 						/>
 					</div>
 				</div>
-			
+			</div>
+		);
+	}
+}
