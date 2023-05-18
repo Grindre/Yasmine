@@ -28,4 +28,9 @@
 	cursor: pointer;
 	text-align: center;
 	text-decoration: underline;
-	font-size
+	font-size: 10px;
+	line-height: 30px;
+}
+
+.MessageInput
+{
