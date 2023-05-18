@@ -24,4 +24,6 @@
 }
 .LoadMreDiv .LoadMoreButton
 {
-	co
+	color: blue;
+	cursor: pointer;
+	text-align: center
