@@ -243,3 +243,62 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 	{
 		const userId : number = this.userService.getUserId();
 		this.setUser( userId );
+	}
+
+
+	public setUser( userId : number )
+	{
+		this.setState( {
+			userId : userId,
+		} );
+
+		this.userService.changeUser( userId );
+	}
+
+	public async asyncJoinChatRoom( roomId : string ) : Promise<any>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				this.clientConnect.joinRoom( {
+					roomId : roomId
+				} as JoinRoomRequest, ( response : any ) : void =>
+				{
+					//console.log( `💎 join room response: `, response );
+					resolve( response );
+				} );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	public async asyncLoad( roomId : string ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const errorRoomId : string | null = VaChatRoomEntityItem.isValidRoomId( roomId );
+				if ( null !== errorRoomId )
+				{
+					return reject( errorRoomId );
+				}
+
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `asyncLoad :: failed to get wallet` );
+				}
+
+				console.log( `will queryRoom ${ walletObj.address }.${ roomId }` );
+				const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, roomId );
+				if ( ! roomItem )
+				{
+					return reject( `room not found` );
+				}
+
+				console.log( `🌈 asyncLoad roomItem :`, roomItem );
