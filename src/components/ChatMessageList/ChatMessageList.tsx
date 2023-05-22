@@ -198,3 +198,48 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 			{
 				reject( err );
 			}
+		});
+	}
+
+	componentDidUpdate()
+	{
+		//this._scrollToBottom();
+	}
+
+	componentDidMount()
+	{
+		if ( this.initialized )
+		{
+			console.log( `🍔 componentDidMount, already initialized` );
+			return;
+		}
+		this.initialized = true;
+
+		//	add event handler
+		document.addEventListener( 'visibilitychange', this._onVisibilityChange );
+
+		//	...
+		this.initUser();
+
+		//	...
+		this.backgroundRefresh().then( res =>
+		{
+			console.log( `))) background refresh is started` );
+		} ).catch( err =>
+		{
+			console.error( `### failed to start the background refresh` );
+		} );
+
+		//	...
+		console.log( `🍔 componentDidMount` );
+	}
+
+	componentWillUnmount()
+	{
+		document.removeEventListener( 'visibilitychange', this._onVisibilityChange );
+	}
+
+	private initUser()
+	{
+		const userId : number = this.userService.getUserId();
+		this.setUser( userId );
