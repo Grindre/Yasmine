@@ -148,3 +148,53 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 				{
 					return reject( `receiveMessageCallback :: invalid message` );
 				}
+
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `receiveMessageCallback :: failed to get wallet` );
+				}
+
+				/**
+				 * 	current room
+				 */
+				if ( message.payload.roomId === this.state.roomId )
+				{
+					const decrypted : boolean = await this.handleArrivedMessageList( message.payload.roomId, [ message ] ) > 0;
+					this.scrollToBottom();
+
+					//
+					//	Send feedback
+					//
+					// const sentByMe = walletObj.address.trim().toLowerCase() === message.payload.wallet.trim().toLowerCase();
+					// if ( MessageType.USER === message.payload.messageType &&
+					// 	! sentByMe )
+					// {
+					// 	await this.messageService.sendMessage
+					// 	(
+					// 		message.payload.roomId,
+					// 		MessageType.SYSTEM, {
+					// 		hash : message.payload.hash,
+					// 		read : true,
+					// 		decrypted : decrypted
+					// 	} );
+					// }
+				}
+				if ( _.isFunction( callback ) )
+				{
+					callback( 200 );
+				}
+
+				/**
+				 * 	count the number of unread messages in all rooms
+				 */
+				await this.latestMessageService.countMessage( message.payload.roomId );
+				this.props.callbackOnMessageArrived();
+
+				//	...
+				resolve();
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
