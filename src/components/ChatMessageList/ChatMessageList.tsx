@@ -62,3 +62,42 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 
 	refPopupInvitation : React.RefObject<any>;
 	refPopupJoin : React.RefObject<any>;
+
+	userService ! : UserService;
+	messageService ! : MessageService;
+	latestMessageService ! : LatestMessageService;
+
+	/**
+	 * 	...
+	 */
+	clientConnect ! : ClientConnect;
+	clientRoom ! : ClientRoom;
+	clientRoomLatestMessage ! : ClientRoomLatestMessage;
+
+	chatMessageList : Array<ChatMessage> = [];
+	oldestTimestamp : LastTimestamp = {};
+
+
+	constructor( props : any )
+	{
+		if ( ! _.isString( props.serverUrl ) || _.isEmpty( props.serverUrl ) )
+		{
+			throw new Error( `invalid serverUrl` );
+		}
+		if ( ! _.isFunction( props.callbackOnMessageArrived ) )
+		{
+			throw new Error( `invalid props.callbackOnMessageArrived` );
+		}
+
+		//	...
+		super( props );
+		this.state = {
+			isPageActive : false,
+			serverUrl : props.serverUrl,
+			roomId : ``,
+			roomItem : {} as ChatRoomEntityItem,
+			userId : 1,
+
+			messages : [],
+			loading : false,
+			value : ''
