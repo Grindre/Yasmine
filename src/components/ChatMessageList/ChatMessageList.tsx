@@ -302,3 +302,51 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 				}
 
 				console.log( `🌈 asyncLoad roomItem :`, roomItem );
+
+				//
+				//	initialize member variables
+				//
+				this.chatMessageList = [];
+				delete this.oldestTimestamp[ roomId ];
+				this.setState( {
+					loading : true,
+					roomId : roomItem.roomId,
+					roomItem : roomItem,
+					messages : [],
+				} );
+				const _response : any = await this.asyncJoinChatRoom( roomId );
+
+				//	...
+				await this.loadMessageList( roomId );
+				this.scrollToBottom();
+
+				//	...
+				this.setState( {
+					loading : false
+				} );
+				resolve( true );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	private async loadMessageList( roomId : string ) : Promise<number>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const errorRoomId : string | null = VaChatRoomEntityItem.isValidRoomId( roomId );
+				if ( null !== errorRoomId )
+				{
+					return reject( errorRoomId );
+				}
+
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `_asyncLoadQueueMessage :: failed to get wallet` );
+				}
