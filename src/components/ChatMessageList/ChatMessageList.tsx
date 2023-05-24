@@ -529,3 +529,46 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 	{
 		await this.latestMessageService.countMessage();
 		await this.activateAllRooms();
+	}
+
+	/**
+	 * 	try to activate all rooms continuously in the background
+	 *	@private
+	 */
+	private async activateAllRooms()
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `_activateAllRooms :: invalid walletObj null` );
+				}
+
+				//	读取所有房间的 last timestamp
+				const rooms : Array<ChatRoomEntityItem> = await this.clientRoom.queryRooms( walletObj.address );
+				if ( Array.isArray( rooms ) )
+				{
+					for ( const room of rooms )
+					{
+						const errorRoom = VaChatRoomEntityItem.validateChatRoomEntityItem( room );
+						if ( null !== errorRoom )
+						{
+							continue;
+						}
+
+						await this.asyncJoinChatRoom( room.roomId );
+					}
+				}
+
+				//	start the next tick
+				setTimeout( async () =>
+				{
+					await this.activateAllRooms();
+
+				}, 60 * 1000 );
+
+				//	...
+				resolve( true );
