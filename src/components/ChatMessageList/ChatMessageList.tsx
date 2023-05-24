@@ -350,3 +350,51 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 				{
 					return reject( `_asyncLoadQueueMessage :: failed to get wallet` );
 				}
+
+				const startTimestamp = 0;
+				let endTimestamp = -1;
+				const pageSize = 10;
+				let pageNo = 1;
+
+				if ( _.isNumber( this.oldestTimestamp[ roomId ] ) )
+				{
+					endTimestamp = this.oldestTimestamp[ roomId ];
+					if ( endTimestamp > 1 )
+					{
+						//	to exclude the current record
+						endTimestamp--;
+					}
+				}
+				const messageList : Array<SendMessageRequest> = await this.messageService.pullMessage( roomId, startTimestamp, endTimestamp, pageNo, pageSize );
+				//console.log( `🍒🍒🍒 messageList by pullMessage :`, messageList );
+
+				/**
+				 * 	handle arrived message list
+				 */
+				const arrivedCount : number = await this.handleArrivedMessageList( roomId, messageList );
+				//console.log( `🍔🍔🍔 arrivedCount :`, arrivedCount );
+				if ( arrivedCount > 0 )
+				{
+					/**
+					 * 	count the number of unread messages in all rooms
+					 */
+					await this.latestMessageService.countMessage( roomId );
+					this.props.callbackOnMessageArrived();
+				}
+
+				//	...
+				resolve( arrivedCount );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	/**
+	 *	@param roomId		{string}
+	 *	@param messageList	{Array<SendMessageRequest>}
+	 *	@returns {Promise<number>}
+	 *	@private
+	 */
