@@ -398,3 +398,43 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 	 *	@returns {Promise<number>}
 	 *	@private
 	 */
+	private handleArrivedMessageList( roomId : string, messageList : Array<SendMessageRequest> ) : Promise<number>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const errorRoomId : string | null = VaChatRoomEntityItem.isValidRoomId( roomId );
+				if ( null !== errorRoomId )
+				{
+					return reject( `${ this.constructor.name }.handleArrivedMessageList :: ${ errorRoomId }` );
+				}
+
+				//
+				//	decrypt the message list
+				//
+				const decryptedMessageList : DecryptedMessageList | null = await this.messageService.decryptMessageList( messageList );
+				if ( null !== decryptedMessageList )
+				{
+					//
+					//	pick up the oldest for the next querying
+					//
+					if ( undefined === this.oldestTimestamp[ roomId ] ||
+						decryptedMessageList.oldest.timestamp < this.oldestTimestamp[ roomId ] )
+					{
+						//	save the older timestamp
+						this.oldestTimestamp[ roomId ] = decryptedMessageList.oldest.timestamp;
+					}
+
+					//
+					//	pick up the latest
+					//
+					await this.latestMessageService.storeLatestMessage( roomId, decryptedMessageList.latest );
+
+					//
+					//	update list
+					//
+					this.chatMessageList = this.chatMessageList.concat( decryptedMessageList.list );
+
+					/**
+					 * 	sort the decrypted message list by .timestamp ASC
