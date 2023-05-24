@@ -438,3 +438,51 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 
 					/**
 					 * 	sort the decrypted message list by .timestamp ASC
+					 */
+					this.chatMessageList.sort( ( a : ChatMessage, b : ChatMessage ) => a.timestamp - b.timestamp );
+
+					this.setState( {
+						messages : this.chatMessageList
+					} );
+
+					return resolve( decryptedMessageList.list.length );
+				}
+
+				resolve( 0 );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+
+	private _onVisibilityChange()
+	{
+		//
+		//	todo
+		//	not working properly
+		//
+		this.setState( {
+			isPageActive : ! document.hidden
+		} );
+
+		console.log( `🌈 isPageActive:`, this.state.isPageActive );
+	}
+
+	private scrollToBottom()
+	{
+		//this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+	}
+
+	private onChatMessageListScroll( e : any )
+	{
+		const scrollTop = e.target.scrollTop;
+		if ( 0 === scrollTop )
+		{
+			console.log( `🍄 handleScroll : at top` );
+		}
+	}
+
+	onClickLoadMore( e : any )
