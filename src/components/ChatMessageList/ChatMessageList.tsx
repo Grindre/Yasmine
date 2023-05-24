@@ -572,3 +572,45 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 
 				//	...
 				resolve( true );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+
+	onClickSendMessage( e : any )
+	{
+		e.preventDefault();
+		this.messageService.sendMessage( this.state.roomId, MessageType.USER, this.state.value ).then( res =>
+		{
+			console.log( `onClickSendMessage :`, res );
+			this.setState( { value : '' } );
+			this.scrollToBottom();
+
+		} ).catch( err =>
+		{
+			console.error( `onClickSendMessage :`, err );
+		} )
+	}
+
+	onInputValueChanged( e : any )
+	{
+		this.setState( { value : e.target.value } );
+	}
+
+	onInputKeyDown( e : any )
+	{
+		if ( 'Enter' === e.key )
+		{
+			this.onClickSendMessage( e );
+		}
+	}
+
+	onClickInvitation()
+	{
+		const childInstance = this.refPopupInvitation.current;
+		childInstance.togglePopup( this.state.roomId );
+	}
