@@ -614,3 +614,49 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 		const childInstance = this.refPopupInvitation.current;
 		childInstance.togglePopup( this.state.roomId );
 	}
+
+	onClickJoin()
+	{
+		const childInstance = this.refPopupJoin.current;
+		childInstance.togglePopup();
+	}
+
+
+	render()
+	{
+		return (
+			<div>
+				<div className="RoomIdDiv sticky-top">
+					roomId: { this.state.roomId }
+				</div>
+				<div className="LoadMreDiv">
+					<a onClick={ this.onClickLoadMore } className="LoadMoreButton">Older</a>
+				</div>
+				<div className="ChatMessageList"
+				     style={ { minHeight : '100vh', overflowY : 'scroll' } }
+				     onScroll={ this.onChatMessageListScroll }
+				>
+					{ this.state.messages.map( ( item : any ) =>
+						<div key={ item.hash }>
+							{ item.fromName } / { item.timestamp }[{ new Date( item.timestamp ).toLocaleString() }]
+							<br/>
+							hash: { item.hash }
+							<br/>
+							{ item.body }
+							<hr/>
+						</div>
+					) }
+				</div>
+				<div style={ { height : '30px' } }></div>
+
+				{ this.state.loading &&
+					<div className="BarDiv sticky-bottom">Loading, please wait ...</div>
+				}
+				{ ( ! this.state.loading && '' !== this.state.roomId ) &&
+					<div className="BarDiv sticky-bottom">
+						{/*<button onClick={ this.onClickJoinRoom }>Join</button>*/ }
+						{/*&nbsp;*/ }
+						{/*<button onClick={ this.onClickLeaveRoom }>Leave</button>*/ }
+						{/*&nbsp;&nbsp;&nbsp;*/ }
+						<input className="MessageInput"
+						       autoFocus
