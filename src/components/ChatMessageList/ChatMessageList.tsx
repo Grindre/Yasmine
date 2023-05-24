@@ -486,3 +486,46 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 	}
 
 	onClickLoadMore( e : any )
+	{
+		e.preventDefault();
+		if ( null !== VaChatRoomEntityItem.isValidRoomId( this.state.roomId ) )
+		{
+			throw new Error( `invalid this.state.roomId` );
+		}
+
+		this.loadMessageList( this.state.roomId ).then( loaded =>
+		{
+			//this._scrollToBottom();
+
+		} ).catch( err =>
+		{
+			console.error( err );
+		} );
+	}
+
+	onClickJoinRoom( e : any )
+	{
+		e.preventDefault();
+	}
+
+	onClickLeaveRoom( e : any )
+	{
+		e.preventDefault();
+		const callback : ResponseCallback = ( response : LeaveRoomResponse ) : void =>
+		{
+			console.log( `🌶️ leave room response: `, response );
+		};
+		this.clientConnect.leaveRoom( {
+			roomId : this.state.roomId
+		} as LeaveRoomRequest, callback );
+	}
+
+
+	/**
+	 * 	background refresh
+	 *	@private
+	 */
+	private async backgroundRefresh()
+	{
+		await this.latestMessageService.countMessage();
+		await this.activateAllRooms();
