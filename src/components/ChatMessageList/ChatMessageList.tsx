@@ -660,3 +660,26 @@ export class ChatMessageList extends React.Component<ChatMessageListProps, ChatM
 						{/*&nbsp;&nbsp;&nbsp;*/ }
 						<input className="MessageInput"
 						       autoFocus
+						       placeholder="Say something ..."
+						       value={ this.state.value }
+						       onKeyDown={ this.onInputKeyDown }
+						       onChange={ this.onInputValueChanged }></input>
+						&nbsp;
+						<button onClick={ this.onClickSendMessage }>Send</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<button onClick={ this.onClickInvitation }>Invite</button>
+						<PopupInvitation
+							ref={ this.refPopupInvitation }
+						></PopupInvitation>
+					</div>
+				}
+				<div style={ { float : "left", clear : "both" } }
+				     ref={ ( el ) =>
+				     {
+					     this.messagesEnd = el;
+				     } }>
+				</div>
+			</div>
+		);
+	}
+}
