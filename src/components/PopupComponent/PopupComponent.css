@@ -19,4 +19,8 @@
 }
 
 .popup-content {
-	color: #3333
+	color: #333333;
+	position: relative;
+}
+
+.close-butto
