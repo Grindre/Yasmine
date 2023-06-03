@@ -23,4 +23,7 @@
 	position: relative;
 }
 
-.close-butto
+.close-button {
+	position: absolute;
+	right: 0;
+	top: 
