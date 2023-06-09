@@ -31,3 +31,8 @@
 	border: 1px solid #3498db;
 	color: #3498db;
 	width: 20px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+
