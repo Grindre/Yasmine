@@ -1,4 +1,6 @@
 // PopupComponent.tsx
 
 import React, { Component } from 'react';
-import './PopupCompon
+import './PopupComponent.css';
+
+export interface PopupComponentProp
