@@ -9,4 +9,6 @@ export interface PopupComponentProps
 	onClose : () => void;
 }
 
-export class PopupComponent extends Comp
+export class PopupComponent extends Component<PopupComponentProps>
+{
+	constructor( props
