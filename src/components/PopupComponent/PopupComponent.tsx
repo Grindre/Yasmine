@@ -6,4 +6,7 @@ import './PopupComponent.css';
 export interface PopupComponentProps
 {
 	children : React.ReactNode;
-	onClose
+	onClose : () => void;
+}
+
+export class PopupComponent extends Comp
