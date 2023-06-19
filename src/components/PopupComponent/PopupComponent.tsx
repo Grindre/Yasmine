@@ -11,4 +11,9 @@ export interface PopupComponentProps
 
 export class PopupComponent extends Component<PopupComponentProps>
 {
-	constructor( props
+	constructor( props : any )
+	{
+		super( props );
+	}
+
+	r
