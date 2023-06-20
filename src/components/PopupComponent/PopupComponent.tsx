@@ -16,4 +16,7 @@ export class PopupComponent extends Component<PopupComponentProps>
 		super( props );
 	}
 
-	r
+	render()
+	{
+		return (
+			<div className="popup-conta
