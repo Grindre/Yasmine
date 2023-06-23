@@ -21,4 +21,4 @@ export class PopupComponent extends Component<PopupComponentProps>
 		return (
 			<div className="popup-container">
 				<div className="popup-content">
-	
+					<button onClick={ this.props.onClose } cl
