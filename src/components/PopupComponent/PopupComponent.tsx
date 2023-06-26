@@ -23,4 +23,6 @@ export class PopupComponent extends Component<PopupComponentProps>
 				<div className="popup-content">
 					<button onClick={ this.props.onClose } className="close-button">
 						X
-					</b
+					</button>
+					{ this.props.children }
+	
