@@ -25,4 +25,8 @@ export class PopupComponent extends Component<PopupComponentProps>
 						X
 					</button>
 					{ this.props.children }
-	
+				</div>
+			</div>
+		);
+	}
+}
