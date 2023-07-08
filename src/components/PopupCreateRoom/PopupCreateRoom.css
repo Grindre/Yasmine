@@ -13,4 +13,6 @@
 
 .optButton {
 	background-color: #3498db;
-	color: w
+	color: white;
+	border: none;
+	border-radius: 4px;
