@@ -115,3 +115,16 @@ export class PopupCreateRoom extends Component<PopupCreateRoomProps,PopupCreateR
 					<tr>
 						<td></td>
 						<td>
+							<button onClick={ this.onClickSubmit } className="optButton">Save</button>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<div className="bottomPanel">
+				</div>
+			</PopupComponent>
+			}
+			</div>
+		);
+	}
+}

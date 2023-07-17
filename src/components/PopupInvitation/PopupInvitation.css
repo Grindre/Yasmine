@@ -1,0 +1,37 @@
+
+.container
+{
+}
+
+.titleDiv
+{
+	height: 26px;
+	font-size: 12px;
+	font-weight: 800;
+}
+.textAreaDiv
+{
+	padding: 6px 0 0 2px;
+}
+.textAreaDiv textarea
+{
+	width : 290px;
+	height : 120px;
+	font-size: 9px;
+}
+
+
+.optButton {
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 80px;
+}
+
+.bottomPanel
+{
+	height: 50px;
+	padding: 10px 0 0 0;
+	text-align: center;
