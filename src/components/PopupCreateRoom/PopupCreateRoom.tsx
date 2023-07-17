@@ -73,3 +73,45 @@ export class PopupCreateRoom extends Component<PopupCreateRoomProps,PopupCreateR
 	render()
 	{
 		return (
+			<div className="container">
+			{ this.state.showPopup &&
+			<PopupComponent onClose={ this.togglePopup }>
+				<div className="titleDiv">Create Chat Room</div>
+				<table>
+					<tbody>
+					<tr>
+						<td style={{ width : '40px' }}>Type</td>
+						<td style={{ height : '24px' }}>
+							<label>
+								<input
+									type="radio"
+									value={ ChatType.PRIVATE }
+									checked={this.state.selectedChatType === ChatType.PRIVATE }
+									onChange={this.onChatTypeOptionChange}
+								/>Private
+							</label>
+							&nbsp;&nbsp;
+							<label>
+								<input
+									type="radio"
+									value={ ChatType.GROUP }
+									checked={this.state.selectedChatType === ChatType.GROUP }
+									onChange={this.onChatTypeOptionChange}
+								/>Group
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td style={{ height : '24px' }}>
+							<input type="text" ref={ this.refInputName } />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style={{ height : '20px' }}>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
