@@ -42,3 +42,45 @@ export class PopupInvitation extends Component<PopupInvitationProps, PopupInvita
 	{
 		this.setState( {
 			showPopup : ! this.state.showPopup,
+		} );
+
+		console.log( `🌼 show : ${ this.state.showPopup }, will create invitation for roomId : ${ roomId }` );
+		if ( roomId && null === VaChatRoomEntityItem.isValidRoomId( roomId ) )
+		{
+			this.asyncCreateInvitation( roomId ).then( ( res : InviteRequest ) =>
+			{
+				const json : string = JSON.stringify( res );
+				this.setState( {
+					textareaValue : json
+				} );
+
+			} ).catch( err =>
+			{
+				console.error( err );
+			} );
+		}
+	}
+
+	private asyncCreateInvitation( roomId : string ) : Promise<InviteRequest>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( null !== VaChatRoomEntityItem.isValidRoomId( roomId ) )
+				{
+					return reject( `invalid roomId` );
+				}
+
+				//	get current wallet
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					window.alert( `failed to create walletObj` );
+					return ;
+				}
+
+				const inviteRequest : InviteRequest | null = await this.clientRoom.inviteMember( walletObj.address, roomId );
+				if ( null === inviteRequest )
+				{
+					return reject( `failed to create invitation` );
