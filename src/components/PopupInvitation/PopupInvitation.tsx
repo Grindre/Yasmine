@@ -125,3 +125,22 @@ export class PopupInvitation extends Component<PopupInvitationProps, PopupInvita
 	{
 		return (
 			<div className="container">
+				{ this.state.showPopup &&
+					<PopupComponent onClose={ this.togglePopup }>
+						<div className="titleDiv">Create Invitation</div>
+						<div className="textAreaDiv">
+							<textarea
+								ref={ this.refTextarea }
+								defaultValue={ this.state.textareaValue }></textarea>
+						</div>
+						<div className="bottomPanel">
+							<button className="optButton"
+								onClick={ this.onClickCopyToClipboard }>Copy
+							</button>
+						</div>
+					</PopupComponent>
+				}
+			</div>
+		);
+	}
+}
