@@ -84,3 +84,44 @@ export class PopupInvitation extends Component<PopupInvitationProps, PopupInvita
 				if ( null === inviteRequest )
 				{
 					return reject( `failed to create invitation` );
+				}
+
+				//	...
+				resolve( inviteRequest );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	onClickCopyToClipboard()
+	{
+		if ( navigator.clipboard )
+		{
+			// 通过 Clipboard API 复制内容
+			navigator.clipboard.writeText( this.refTextarea.current.value )
+				.then( () =>
+				{
+					this.refTextarea.current.select();
+					console.log( '文本已成功复制到剪切板' );
+				} )
+				.catch( ( err ) =>
+				{
+					console.error( '复制到剪切板时出错:', err );
+				} );
+		}
+		else
+		{
+			// 如果不支持 Clipboard API，则回退到使用 document.execCommand 方法
+			this.refTextarea.current.select();
+			document.execCommand( 'copy' );
+			console.log( '文本已成功复制到剪切板' );
+		}
+	}
+
+	render()
+	{
+		return (
+			<div className="container">
