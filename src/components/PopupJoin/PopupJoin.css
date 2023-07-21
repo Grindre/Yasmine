@@ -4,4 +4,8 @@
 
 .titleDiv
 {
-	height: 26
+	height: 26px;
+	font-size: 12px;
+	font-weight: 800;
+}
+.textAre
