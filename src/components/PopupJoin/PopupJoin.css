@@ -24,4 +24,11 @@
 	background-color: #3498db;
 	color: white;
 	border: none;
-	border-radius: 4p
+	border-radius: 4px;
+	cursor: pointer;
+	width: 80px;
+}
+
+.bottomPanel
+{
+	
