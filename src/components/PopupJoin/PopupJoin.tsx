@@ -67,3 +67,52 @@ export class PopupJoin extends Component<PopupJoinProps, PopupJoinState>
 				if ( ! walletObj )
 				{
 					window.alert( `failed to create walletObj` );
+					return ;
+				}
+
+				if ( null !== VaChatRoomEntityItem.isValidRoomId( roomId ) )
+				{
+					return reject( `invalid roomId` );
+				}
+
+				const inviteRequest : InviteRequest | null = await this.clientRoom.inviteMember( walletObj.address, roomId );
+				if ( null === inviteRequest )
+				{
+					return reject( `failed to create invitation` );
+				}
+
+				//	...
+				resolve( inviteRequest );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	onClickSaveJoin()
+	{
+		const userName : string | null = this.userService.getUserName();
+		const walletObj = this.userService.getWallet();
+		if ( ! walletObj )
+		{
+			window.alert( `failed to create walletObj` );
+			return ;
+		}
+
+		console.log( `onClickSaveJoin - walletObj :`, walletObj );
+
+		const member : ChatRoomMember = {
+			memberType : ChatRoomMemberType.MEMBER,
+			wallet : walletObj.address,
+			publicKey : walletObj.publicKey,
+			userName : String( userName )
+		};
+		console.log( `onClickSaveJoin member :`, member );
+
+		const inviteString : string = this.refTextarea.current.value;
+		this.clientRoom.acceptInvitation( inviteString, member ).then( ( chatRoomEntityItem : ChatRoomEntityItem ) =>
+		{
+			console.log( `chatRoomEntityItem :`, chatRoomEntityItem );
+			window.alert( `Joined room ${ chatRoomEntityItem.name }` );
