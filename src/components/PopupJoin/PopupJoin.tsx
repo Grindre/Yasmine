@@ -116,3 +116,44 @@ export class PopupJoin extends Component<PopupJoinProps, PopupJoinState>
 		{
 			console.log( `chatRoomEntityItem :`, chatRoomEntityItem );
 			window.alert( `Joined room ${ chatRoomEntityItem.name }` );
+			if ( _.isFunction( this.props.callback ) )
+			{
+				this.props.callback( chatRoomEntityItem );
+			}
+		})
+		.catch( err =>
+		{
+			console.error( err );
+			window.alert( err );
+		});
+
+
+
+		// console.log( `🌼 show : ${ this.state.showPopup }, will create invitation for roomId : ${ roomId }` );
+		// if ( roomId && null === VaChatRoomEntityItem.isValidRoomId( roomId ) )
+		// {
+		// 	this.asyncCreateInvitation( roomId ).then( ( res : InviteRequest ) =>
+		// 	{
+		// 		const json : string = JSON.stringify( res );
+		// 		this.setState( {
+		// 			textareaValue : json
+		// 		} );
+		//
+		// 	} ).catch( err =>
+		// 	{
+		// 		console.error( err );
+		// 	} );
+		// }
+	}
+
+	render()
+	{
+		return (
+			<div className="container">
+				{ this.state.showPopup &&
+					<PopupComponent onClose={ this.togglePopup }>
+						<div className="titleDiv">Join a Room</div>
+						<div className="textAreaDiv">
+							<textarea
+								ref={ this.refTextarea }
+								defaultValue={ this.state.textareaValue }></textarea>
