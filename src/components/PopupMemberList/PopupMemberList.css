@@ -1,0 +1,45 @@
+
+.container
+{
+
+}
+
+
+.container .memberList
+{
+	min-height: 160px;
+	background-color: lightcyan;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.container .memberList .memberListItem
+{
+	padding-bottom: 5px;
+}
+
+.container .memberList .memberListItem .memberInfoBox
+{
+
+}
+
+.container .memberList .memberListItem .memberInfoBox .memberName
+{
+	font-size: 10px;
+	font-weight: 800;
+}
+
+.container .memberList .memberListItem .memberInfoBox .memberWallet
+{
+	font-size: 10px;
+}
+
+.container .memberList .memberListItem .memberInfoBox .memberCreatedTime
+{
+	font-size: 8px;
+}
+
+

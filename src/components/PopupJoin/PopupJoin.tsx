@@ -157,3 +157,15 @@ export class PopupJoin extends Component<PopupJoinProps, PopupJoinState>
 							<textarea
 								ref={ this.refTextarea }
 								defaultValue={ this.state.textareaValue }></textarea>
+						</div>
+						<div className="bottomPanel">
+							<button className="optButton"
+								onClick={ this.onClickSaveJoin }>Join
+							</button>
+						</div>
+					</PopupComponent>
+				}
+			</div>
+		);
+	}
+}
