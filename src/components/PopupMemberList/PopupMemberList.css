@@ -43,3 +43,10 @@
 }
 
 
+
+.container .memberList .memberOptBox a
+{
+	font-size: 9px;
+	color: blue;
+	cursor: pointer;
+}
