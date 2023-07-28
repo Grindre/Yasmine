@@ -39,3 +39,43 @@ export class PopupMemberList extends Component<PopupMemberListProps, PopupMember
 			showPopup : false,
 			roomMembers : [],
 		};
+
+		//	...
+		this.togglePopup = this.togglePopup.bind( this );
+		this.onClickDeleteMember = this.onClickDeleteMember.bind( this );
+	}
+
+	public togglePopup()
+	{
+		this.setState( {
+			showPopup : ! this.state.showPopup,
+		} );
+	}
+
+	public loadMembers( roomId : string )
+	{
+		this.asyncLoadMembers( roomId ).then( ( members : ChatRoomMembers ) =>
+		{
+			if ( _.isObject( members ) )
+			{
+				const roomMembers = _.values( members );
+				this.setState({
+					roomMembers : roomMembers,
+				});
+			}
+
+		}).catch( err =>
+		{
+			window.alert( err );
+		});
+	}
+
+	private asyncLoadMembers( roomId : string ) : Promise<ChatRoomMembers>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const walletObject = this.userService.getWallet();
+				if ( ! walletObject )
+				{
