@@ -79,3 +79,56 @@ export class PopupMemberList extends Component<PopupMemberListProps, PopupMember
 				const walletObject = this.userService.getWallet();
 				if ( ! walletObject )
 				{
+					window.alert( `failed to create walletObj` );
+					return reject( `failed to create walletObj` );
+				}
+
+				if ( null !== VaChatRoomEntityItem.isValidRoomId( roomId ) )
+				{
+					window.alert( `invalid roomId` );
+					return reject( `invalid roomId` );
+				}
+
+				const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObject.address, roomId );
+				if ( ! _.isObject( roomItem ) )
+				{
+					window.alert( `room not found` );
+					return reject( `room not found` );
+				}
+				this.roomItem = roomItem;
+
+				//	...
+				const chatRoomMembers : ChatRoomMembers = await this.clientRoom.queryMembers( walletObject.address, roomId );
+
+				//	...
+				resolve( chatRoomMembers );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	onClickDeleteMember( wallet : string )
+	{
+		const walletObject = this.userService.getWallet();
+		if ( ! walletObject )
+		{
+			window.alert( `failed to get walletObj` );
+			return;
+		}
+
+		if ( ! this.roomItem )
+		{
+			window.alert( `room not ready` );
+			return;
+		}
+		if ( ChatType.PRIVATE === this.roomItem.chatType )
+		{
+			window.alert( `members in private chat room are not allowed to be deleted` );
+			return;
+		}
+
+		this.clientRoom.getMember( walletObject.address, this.roomItem.roomId, wallet ).then( async ( member : ChatRoomMember | null ) =>
+		{
