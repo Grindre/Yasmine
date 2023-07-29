@@ -132,3 +132,47 @@ export class PopupMemberList extends Component<PopupMemberListProps, PopupMember
 
 		this.clientRoom.getMember( walletObject.address, this.roomItem.roomId, wallet ).then( async ( member : ChatRoomMember | null ) =>
 		{
+			if ( ! _.isObject( member ) )
+			{
+				window.alert( `member not found` );
+				return;
+			}
+			if ( ChatRoomMemberType.OWNER === member.memberType )
+			{
+				window.alert( `owner cannot be deleted` );
+				return;
+			}
+
+			if ( window.confirm( `Are you sure you want to delete this member?` ) )
+			{
+				const deleted : boolean = await this.clientRoom.deleteMember( walletObject.address, this.roomItem.roomId, wallet );
+				if ( deleted )
+				{
+					window.alert( `deleted successfully` );
+					this.togglePopup();
+					if ( _.isFunction( this.props.callback ) )
+					{
+						this.props.callback( deleted );
+					}
+				}
+				else
+				{
+					window.alert( `deleted unsuccessfully` );
+				}
+			}
+		} ).catch( err =>
+		{
+			window.alert( `failed to load the member` );
+			return;
+		})
+
+	}
+
+	render()
+	{
+		return (
+			<div className="container">
+				{ this.state.showPopup &&
+					<PopupComponent onClose={ this.togglePopup }>
+						<div className="titleDiv">Join a Room</div>
+						<div className="memberList">
