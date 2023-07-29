@@ -2,4 +2,7 @@
 {
 	width: 100%;
 	padding: 0;
-	ma
+	margin: 0;
+	box-sizing: border-box;
+}
+.RoomListDiv .titleBar
