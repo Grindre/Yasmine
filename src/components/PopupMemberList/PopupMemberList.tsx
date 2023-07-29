@@ -176,3 +176,30 @@ export class PopupMemberList extends Component<PopupMemberListProps, PopupMember
 					<PopupComponent onClose={ this.togglePopup }>
 						<div className="titleDiv">Join a Room</div>
 						<div className="memberList">
+							{ this.state.roomMembers.map( ( item : ChatRoomMember ) =>
+								<div key={ item.wallet }
+								     data-id={ item.wallet } className="memberListItem">
+									<div className="memberInfoBox">
+										<div className="memberName">
+											{ item.userName }
+											&nbsp;/&nbsp;
+											{ ChatRoomMemberType.OWNER === item.memberType ? 'OWNER' : 'MEMBER' }
+										</div>
+										<div className="memberWallet">{ item.wallet }</div>
+										<div className="memberCreatedTime">{ item.timestamp ? new Date( item.timestamp ).toLocaleString() : 'null' }</div>
+									</div>
+									<div className="memberOptBox">
+										<a onClick={ ( _e ) =>
+										{
+											this.onClickDeleteMember( item.wallet )
+										} }>Delete</a>
+									</div>
+								</div>
+							) }
+						</div>
+					</PopupComponent>
+				}
+			</div>
+		);
+	}
+}
