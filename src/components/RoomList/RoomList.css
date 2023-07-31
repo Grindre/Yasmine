@@ -11,4 +11,7 @@
 	width: 100%;
 	height: 24px;
 	background-color: deepskyblue;
-	padding: 6px
+	padding: 6px;
+	margin: 0;
+	box-sizing: border-box;
+	f
