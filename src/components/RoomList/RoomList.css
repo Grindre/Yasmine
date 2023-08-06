@@ -31,4 +31,6 @@
 .RoomListDiv .listContainer
 {
 	min-height: calc( 100vh - 50px );
-	background
+	background-color: paleturquoise;
+	padding: 0;
+	margin
