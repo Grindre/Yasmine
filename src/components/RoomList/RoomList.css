@@ -33,4 +33,6 @@
 	min-height: calc( 100vh - 50px );
 	background-color: paleturquoise;
 	padding: 0;
-	margin
+	margin: 0;
+	box-sizing: border-box;
+	font-weight: 
