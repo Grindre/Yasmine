@@ -38,4 +38,6 @@
 	font-weight: normal;
 	font-size: 11px;
 }
-.RoomListDiv .listC
+.RoomListDiv .listContainer .roomItem
+{
+	background-color: pale
