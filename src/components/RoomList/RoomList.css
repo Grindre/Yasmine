@@ -40,4 +40,5 @@
 }
 .RoomListDiv .listContainer .roomItem
 {
-	background-color: pale
+	background-color: paleturquoise;
+	border-bottom: 1px solid
