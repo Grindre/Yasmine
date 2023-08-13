@@ -49,4 +49,6 @@
 }
 .RoomListDiv .listContainer .roomItem.selected
 {
-	b
+	background-color: #61dafb;
+}
+.RoomListDiv .listCo
