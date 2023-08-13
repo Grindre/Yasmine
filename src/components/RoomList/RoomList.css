@@ -47,4 +47,6 @@
 	cursor: pointer;
 	box-sizing: border-box;
 }
-.
+.RoomListDiv .listContainer .roomItem.selected
+{
+	b
