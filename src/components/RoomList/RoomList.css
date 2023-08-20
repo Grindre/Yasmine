@@ -60,4 +60,8 @@
 	font-size: 10px;
 	font-weight: 800;
 }
-.RoomListDiv .listContainer .roomInfoBox
+.RoomListDiv .listContainer .roomInfoBox .roomId
+{
+	font-size: 9px;
+	width: 100%;
+	/*whi
