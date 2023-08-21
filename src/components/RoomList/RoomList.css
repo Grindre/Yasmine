@@ -66,4 +66,7 @@
 	width: 100%;
 	/*white-space: nowrap;*/
 	/*overflow: hidden;*/
-	/*text-
+	/*text-overflow: ellipsis;*/
+	word-wrap:break-word;
+}
+.RoomLis
