@@ -74,4 +74,7 @@
 	font-size: 8px;
 }
 
-.RoomListDiv .listContainer
+.RoomListDiv .listContainer .roomUnread
+{
+	font-style: italic;
+	co
