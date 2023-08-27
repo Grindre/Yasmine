@@ -69,4 +69,9 @@
 	/*text-overflow: ellipsis;*/
 	word-wrap:break-word;
 }
-.RoomListDiv .listContainer .roomInfoBox .roomCreatedTim
+.RoomListDiv .listContainer .roomInfoBox .roomCreatedTime
+{
+	font-size: 8px;
+}
+
+.RoomListDiv .listContainer
