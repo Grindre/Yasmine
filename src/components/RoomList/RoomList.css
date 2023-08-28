@@ -77,4 +77,7 @@
 .RoomListDiv .listContainer .roomUnread
 {
 	font-style: italic;
-	co
+	color: brown;
+}
+
+.RoomListDiv .listContainer
