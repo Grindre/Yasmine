@@ -80,4 +80,7 @@
 	color: brown;
 }
 
-.RoomListDiv .listContainer
+.RoomListDiv .listContainer .roomOptBox
+{
+	font-size: 9px;
+	height:
