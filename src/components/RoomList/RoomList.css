@@ -88,4 +88,7 @@
 }
 .RoomListDiv .listContainer .roomOptBox a
 {
-	font-size
+	font-size: 9px;
+	color: blue;
+	cursor: pointer;
+}
