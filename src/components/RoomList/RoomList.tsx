@@ -1,1 +1,1 @@
-import { ChatRoomMem
+import { ChatRoomMemberType, ChatType, ClientRoom } from "debeem-chat-client"
