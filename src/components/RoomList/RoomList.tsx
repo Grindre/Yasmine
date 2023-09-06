@@ -6,4 +6,5 @@ import { CreateChatRoom } from "debeem-chat-client";
 import classnames from "classnames";
 import "./RoomList.css";
 import _ from "lodash";
-import { PopupJ
+import { PopupJoin } from "../PopupJoin/PopupJoin";
+import { PopupMem
