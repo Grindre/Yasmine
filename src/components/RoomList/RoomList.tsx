@@ -8,4 +8,4 @@ import "./RoomList.css";
 import _ from "lodash";
 import { PopupJoin } from "../PopupJoin/PopupJoin";
 import { PopupMemberList } from "../PopupMemberList/PopupMemberList";
-im
+import { UserService } from "../../services/User
