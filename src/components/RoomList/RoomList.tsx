@@ -7,4 +7,5 @@ import classnames from "classnames";
 import "./RoomList.css";
 import _ from "lodash";
 import { PopupJoin } from "../PopupJoin/PopupJoin";
-import { PopupMem
+import { PopupMemberList } from "../PopupMemberList/PopupMemberList";
+im
