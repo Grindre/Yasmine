@@ -8,4 +8,8 @@ import "./RoomList.css";
 import _ from "lodash";
 import { PopupJoin } from "../PopupJoin/PopupJoin";
 import { PopupMemberList } from "../PopupMemberList/PopupMemberList";
-import { UserService } from "../../services/User
+import { UserService } from "../../services/UserService";
+
+export interface ChatRoomListProps
+{
+	cal
