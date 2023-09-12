@@ -12,4 +12,4 @@ import { UserService } from "../../services/UserService";
 
 export interface ChatRoomListProps
 {
-	cal
+	callbackOnRoomChanged : ( roomId : string ) 
