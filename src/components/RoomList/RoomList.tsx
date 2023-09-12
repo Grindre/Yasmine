@@ -16,3 +16,6 @@ export interface ChatRoomListProps
 }
 
 export interface ChatRoomListState
+{
+	loading : boolean;
+	showPopupCreateRoom : 
