@@ -18,4 +18,5 @@ export interface ChatRoomListProps
 export interface ChatRoomListState
 {
 	loading : boolean;
-	showPopupCreateRoom : 
+	showPopupCreateRoom : boolean;
+	rooms : Array<ChatRoomEntityIte
