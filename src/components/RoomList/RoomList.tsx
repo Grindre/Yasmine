@@ -25,4 +25,5 @@ export interface ChatRoomListState
 
 /**
  * 	@class
- 
+ */
+export class RoomList extends Rea
