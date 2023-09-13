@@ -19,4 +19,10 @@ export interface ChatRoomListState
 {
 	loading : boolean;
 	showPopupCreateRoom : boolean;
-	rooms : Array<ChatRoomEntityIte
+	rooms : Array<ChatRoomEntityItem>
+	currentRoomId : string;
+}
+
+/**
+ * 	@class
+ 
