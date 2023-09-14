@@ -26,4 +26,4 @@ export interface ChatRoomListState
 /**
  * 	@class
  */
-export class RoomList extends Rea
+export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListStat
