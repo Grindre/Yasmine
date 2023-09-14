@@ -28,4 +28,6 @@ export interface ChatRoomListState
  */
 export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListState>
 {
-	private userService = new UserService()
+	private userService = new UserService();
+	private initialized : boolean = false;
+	privat
