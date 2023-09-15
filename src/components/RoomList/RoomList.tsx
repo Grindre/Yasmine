@@ -30,4 +30,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 {
 	private userService = new UserService();
 	private initialized : boolean = false;
-	privat
+	private clientRoom ! : ClientRoom;
+	refPopupC
