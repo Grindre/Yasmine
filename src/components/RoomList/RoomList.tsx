@@ -32,4 +32,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	private initialized : boolean = false;
 	private clientRoom ! : ClientRoom;
 	refPopupCreateRoom : React.RefObject<any>;
-	r
+	refPopupJoinRoom : React.RefObject<any>;
+	refP
