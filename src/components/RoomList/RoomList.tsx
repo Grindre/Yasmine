@@ -36,3 +36,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	refPopupMemberList : React.RefObject<any>;
 
 
+	constructor( props : any )
+	{
+		if ( ! _.isFunct
