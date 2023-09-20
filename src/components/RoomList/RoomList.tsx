@@ -38,4 +38,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	constructor( props : any )
 	{
-		if ( ! _.isFunct
+		if ( ! _.isFunction( props.callbackOnRoomChanged ) )
+		{
+			thro
