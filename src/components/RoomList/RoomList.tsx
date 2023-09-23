@@ -40,4 +40,9 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	{
 		if ( ! _.isFunction( props.callbackOnRoomChanged ) )
 		{
-			throw new Error( `invalid props.callbackOnRoomChanged` )
+			throw new Error( `invalid props.callbackOnRoomChanged` );
+		}
+
+		super( props );
+		this.state = {
+		
