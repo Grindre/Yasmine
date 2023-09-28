@@ -46,4 +46,9 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		super( props );
 		this.state = {
 			loading : true,
-			showPopupCreateRoom : fal
+			showPopupCreateRoom : false,
+			rooms : [],
+			currentRoomId : '',
+		};
+
+		
