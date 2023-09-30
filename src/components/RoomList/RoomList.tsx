@@ -51,4 +51,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			currentRoomId : '',
 		};
 
-		
+		this.clientRoom = new ClientRoom();
+		t
