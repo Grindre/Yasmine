@@ -52,4 +52,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		};
 
 		this.clientRoom = new ClientRoom();
-		t
+		this.refPopupCreateRoom = React.createRef();
+		this.refPopupJoinRoom = React.
