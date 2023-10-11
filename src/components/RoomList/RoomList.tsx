@@ -64,4 +64,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 		this.callbackPopupCreateRoom = this.callbackPopupCreateRoom.bind( this );
 		this.callbackPopupJoin = this.callbackPopupJoin.bind( this );
-	
+		this.callbackPopupMemberList = this
