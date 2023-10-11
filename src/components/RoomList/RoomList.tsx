@@ -63,4 +63,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		this.onClickDeleteRoom = this.onClickDeleteRoom.bind( this );
 
 		this.callbackPopupCreateRoom = this.callbackPopupCreateRoom.bind( this );
-		this.callbackPopupJo
+		this.callbackPopupJoin = this.callbackPopupJoin.bind( this );
+	
