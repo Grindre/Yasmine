@@ -72,4 +72,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	}
 
 	componentDidMount()
-	
+	{
+		if ( this.initialized )
+		{
+			console.log( `🍔 
