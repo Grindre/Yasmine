@@ -75,4 +75,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	{
 		if ( this.initialized )
 		{
-			console.log( `🍔 
+			console.log( `🍔 componentDidMount, already initialized` );
+			
