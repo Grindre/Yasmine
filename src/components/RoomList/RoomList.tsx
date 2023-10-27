@@ -82,4 +82,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 		//	...
 		console.log( `🍔 componentDidMount` );
-		this
+		this.loadRooms();
+	}
+
+	public loadRoom
