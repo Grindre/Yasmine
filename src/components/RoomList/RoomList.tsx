@@ -85,4 +85,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		this.loadRooms();
 	}
 
-	public loadRoom
+	public loadRooms()
+	{
+		console.log( `🚚🚚🚚 will loadRooms` 
