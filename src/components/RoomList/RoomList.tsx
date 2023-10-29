@@ -87,4 +87,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	public loadRooms()
 	{
-		console.log( `🚚🚚🚚 will loadRooms` 
+		console.log( `🚚🚚🚚 will loadRooms` );
+		this._asyncLoadRooms().then( _res =>
+		{
+			setT
