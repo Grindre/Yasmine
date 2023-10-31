@@ -90,4 +90,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		console.log( `🚚🚚🚚 will loadRooms` );
 		this._asyncLoadRooms().then( _res =>
 		{
-			setT
+			setTimeout( () =>
+			{
+				this.setState( { loading : f
