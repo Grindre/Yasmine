@@ -98,4 +98,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		} ).catch( _err =>
 		{
 			setTimeout( () =>
-			
+			{
+				this.setState( { loading : false } );
+
+			}, 
