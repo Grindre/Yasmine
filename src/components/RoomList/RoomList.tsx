@@ -101,4 +101,10 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			{
 				this.setState( { loading : false } );
 
-			}, 
+			}, 1000 );
+		} );
+	}
+
+	private _asyncLoadRooms()
+	{
+		
