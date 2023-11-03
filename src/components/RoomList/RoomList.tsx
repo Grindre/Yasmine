@@ -107,4 +107,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	private _asyncLoadRooms()
 	{
-		return new Promise( async ( resolve,
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const walletObj = th
