@@ -107,4 +107,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	private _asyncLoadRooms()
 	{
-		
+		return new Promise( async ( resolve,
