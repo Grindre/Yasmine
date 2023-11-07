@@ -111,4 +111,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		{
 			try
 			{
-				const walletObj = th
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj
