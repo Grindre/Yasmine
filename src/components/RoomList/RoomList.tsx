@@ -112,4 +112,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			try
 			{
 				const walletObj = this.userService.getWallet();
-				if ( ! walletObj
+				if ( ! walletObj )
+				{
+					return reject( `_asyncLoa
