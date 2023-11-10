@@ -114,4 +114,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				const walletObj = this.userService.getWallet();
 				if ( ! walletObj )
 				{
-					return reject( `_asyncLoa
+					return reject( `_asyncLoadRooms :: failed to get wallet objec
