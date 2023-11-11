@@ -118,4 +118,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				}
 
 				const rooms : Array<ChatRoomEntityItem> = await this.clientRoom.queryRooms( walletObj.address );
-				console.log( `room
+				console.log( `rooms :`, rooms );
+				this.setState( {
+					rooms : rooms,
+				
