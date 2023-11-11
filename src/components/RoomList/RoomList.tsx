@@ -121,4 +121,9 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				console.log( `rooms :`, rooms );
 				this.setState( {
 					rooms : rooms,
-				
+				} );
+
+				//	...
+				resolve( true );
+			}
+			ca
