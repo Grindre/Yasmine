@@ -126,4 +126,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				//	...
 				resolve( true );
 			}
-			ca
+			catch ( err )
+			{
+				reject( err );
+			}
