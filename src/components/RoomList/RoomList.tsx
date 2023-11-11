@@ -117,4 +117,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 					return reject( `_asyncLoadRooms :: failed to get wallet object` );
 				}
 
-				const rooms : Array<ChatRoomEntityItem> = await this.clientRoom.que
+				const rooms : Array<ChatRoomEntityItem> = await this.clientRoom.queryRooms( walletObj.address );
+				console.log( `room
