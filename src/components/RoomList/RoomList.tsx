@@ -130,3 +130,9 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			{
 				reject( err );
 			}
+		} );
+	}
+
+	onClickCreateRoom()
+	{
+		const child
