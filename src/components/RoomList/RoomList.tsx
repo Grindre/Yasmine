@@ -151,4 +151,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		this.loadRooms();
 	}
 
-	callbackPopupCrea
+	callbackPopupCreateRoom( data : any )
+	{
+		console.log( `callbackPop
