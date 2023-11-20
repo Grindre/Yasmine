@@ -147,4 +147,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	callbackPopupJoin( _data : any )
 	{
-		this.onC
+		this.onClickJoinRoom();
+		this.loadRooms();
+	}
+
+	callbackPopupCrea
