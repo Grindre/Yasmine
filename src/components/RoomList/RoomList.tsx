@@ -153,4 +153,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 	callbackPopupCreateRoom( data : any )
 	{
-		console.log( `callbackPop
+		console.log( `callbackPopupCreateRoom :`, data );
+
+		const walletObj = t
