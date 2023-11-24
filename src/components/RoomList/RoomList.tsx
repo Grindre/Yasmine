@@ -158,4 +158,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		const walletObj = this.userService.getWallet();
 		if ( ! walletObj )
 		{
-			throw new Error( `callba
+			throw new Error( `callbackPopupCreateRoom :: failed to get w
