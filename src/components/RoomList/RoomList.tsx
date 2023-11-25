@@ -163,4 +163,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 		//	todo
 		//	userService.getUserName;
-		const userName : stri
+		const userName : string | null = this.userService.getUserNa
