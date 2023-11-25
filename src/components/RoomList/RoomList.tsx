@@ -165,4 +165,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		//	userService.getUserName;
 		const userName : string | null = this.userService.getUserName();
 
-		console.log( `onClickS
+		console.log( `onClickSaveJoin - walletObj :`, walletObj );
