@@ -166,4 +166,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		const userName : string | null = this.userService.getUserName();
 
 		console.log( `onClickSaveJoin - walletObj :`, walletObj );
-		const createChatRoomOptions : CreateChatRo
+		const createChatRoomOptions : CreateChatRoom = {
+			wallet : walletObj.address,
+			chatType
