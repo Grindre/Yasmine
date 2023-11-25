@@ -168,4 +168,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		console.log( `onClickSaveJoin - walletObj :`, walletObj );
 		const createChatRoomOptions : CreateChatRoom = {
 			wallet : walletObj.address,
-			chatType
+			chatType : data.chatType,
+			name : data.name,
