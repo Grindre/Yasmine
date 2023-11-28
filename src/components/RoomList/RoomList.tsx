@@ -181,4 +181,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				}
 			}
 		};
-		this.clientRo
+		this.clientRoom.createRoom( createChatRoomOptions ).then( re
