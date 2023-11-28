@@ -175,4 +175,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 					memberType : ChatRoomMemberType.OWNER,
 					wallet : walletObj.address,
 					publicKey : walletObj.publicKey,
-					userName : Stri
+					userName : String( userName ),
+					userAvatar : 'https://ww
