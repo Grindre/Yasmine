@@ -174,4 +174,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				[ walletObj.address ] : {
 					memberType : ChatRoomMemberType.OWNER,
 					wallet : walletObj.address,
-					publicKey
+					publicKey : walletObj.publicKey,
+					userName : Stri
