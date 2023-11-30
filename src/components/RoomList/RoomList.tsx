@@ -184,4 +184,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		this.clientRoom.createRoom( createChatRoomOptions ).then( response =>
 		{
 			console.log( `callbackPopupCreateRoom response :`, response );
-			win
+			window.alert( `Room ${ data.name } was created!` );
