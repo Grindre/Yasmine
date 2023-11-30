@@ -183,4 +183,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		};
 		this.clientRoom.createRoom( createChatRoomOptions ).then( response =>
 		{
-			console.log( `callbac
+			console.log( `callbackPopupCreateRoom response :`, response );
+			win
