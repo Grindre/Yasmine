@@ -187,4 +187,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			window.alert( `Room ${ data.name } was created!` );
 
 			this.onClickCreateRoom();
-			this.lo
+			this.loadRooms();
+
+		} ).catch( err =>
+		{
+			console.lo
