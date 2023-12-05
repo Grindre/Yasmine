@@ -191,4 +191,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 
 		} ).catch( err =>
 		{
-			console.lo
+			console.log( err );
+		} );
+	}
+
+	onClickRoomItem( 
