@@ -195,4 +195,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		} );
 	}
 
-	onClickRoomItem( 
+	onClickRoomItem( roomId : string )
+	{
+		console.log( `clicked :`, r
