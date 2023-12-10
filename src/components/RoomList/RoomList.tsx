@@ -199,4 +199,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	{
 		console.log( `clicked :`, roomId );
 		this.setState( {
-			currentRoomId
+			currentRoomId : roomId
+		} );
+		this.props.callbackOnRoomChanged(
