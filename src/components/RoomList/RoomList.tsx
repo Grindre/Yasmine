@@ -201,4 +201,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		this.setState( {
 			currentRoomId : roomId
 		} );
-		this.props.callbackOnRoomChanged(
+		this.props.callbackOnRoomChanged( roomId );
+	}
+
+
+	callbackPopupMemberList( d
