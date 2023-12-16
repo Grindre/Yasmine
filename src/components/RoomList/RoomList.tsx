@@ -211,4 +211,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	}
 	onClickPopupMemberList( roomId : string )
 	{
-		const c
+		const childInstance = this.refPopupMemberList.current;
+		ch
