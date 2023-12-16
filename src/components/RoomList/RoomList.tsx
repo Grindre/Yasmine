@@ -205,4 +205,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	}
 
 
-	callbackPopupMemberList( d
+	callbackPopupMemberList( data : any )
+	{
+		this.loadRooms();
+	}
+	onClickPopu
