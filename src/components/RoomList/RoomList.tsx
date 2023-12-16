@@ -209,4 +209,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	{
 		this.loadRooms();
 	}
-	onClickPopu
+	onClickPopupMemberList( roomId : string )
+	{
+		const c
