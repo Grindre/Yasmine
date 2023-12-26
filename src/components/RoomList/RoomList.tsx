@@ -217,4 +217,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	}
 	onClickDeleteRoom( roomId : string )
 	{
-		if ( window.confirm( `Are you sure you want to delet
+		if ( window.confirm( `Are you sure you want to delete this room?` ) )
+		{
+			const walletObj 
