@@ -219,4 +219,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	{
 		if ( window.confirm( `Are you sure you want to delete this room?` ) )
 		{
-			const walletObj 
+			const walletObj = this.userService.getWallet();
+			if ( ! walletO
