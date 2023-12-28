@@ -222,4 +222,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			const walletObj = this.userService.getWallet();
 			if ( ! walletObj )
 			{
-				throw new Error( `onClickD
+				throw new Error( `onClickDeleteRoom :: failed to get wallet` );
+			
