@@ -225,4 +225,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				throw new Error( `onClickDeleteRoom :: failed to get wallet` );
 			}
 
-			this.clientRoom.deleteRoom( wall
+			this.clientRoom.deleteRoom( walletObj.address, roomId ).then( deleted =
