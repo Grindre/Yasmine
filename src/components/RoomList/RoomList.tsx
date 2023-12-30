@@ -228,3 +228,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			this.clientRoom.deleteRoom( walletObj.address, roomId ).then( deleted =>
 			{
 				window.alert( `room was deleted` );
+				this.loadRooms();
+
+			} ).catch( err =>
+		
