@@ -233,4 +233,12 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 			} ).catch( err =>
 			{
 				window.alert( err );
-			} )
+			} );
+		}
+	}
+
+
+	render()
+	{
+		return (
+			<div className
