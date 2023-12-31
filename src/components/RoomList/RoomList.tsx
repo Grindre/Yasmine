@@ -241,4 +241,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 	render()
 	{
 		return (
-			<div className
+			<div className="RoomListDiv">
+				<div className="titleBar sti
