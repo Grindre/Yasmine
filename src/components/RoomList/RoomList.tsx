@@ -243,4 +243,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 		return (
 			<div className="RoomListDiv">
 				<div className="titleBar sticky-top">Room List</div>
-				<div className=
+				<div className="panel">
+					{ this.state.loading ? (
+						<
