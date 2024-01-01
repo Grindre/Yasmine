@@ -248,4 +248,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 						<div>Loading ...</div>
 					) : (
 						<div>
-							<button onClick={ this.onClickCreateRoom }>
+							<button onClick={ this.onClickCreateRoom }>Create a room
+							</button>
+							
