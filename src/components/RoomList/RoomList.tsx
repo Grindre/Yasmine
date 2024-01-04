@@ -250,4 +250,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 						<div>
 							<button onClick={ this.onClickCreateRoom }>Create a room
 							</button>
-							
+							<PopupCreateRoom
+								ref={ this.refP
