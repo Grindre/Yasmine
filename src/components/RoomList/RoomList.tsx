@@ -253,4 +253,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							<PopupCreateRoom
 								ref={ this.refPopupCreateRoom }
 								callback={ this.callbackPopupCreateRoom }
-							></Po
+							></PopupCreateRoom>
+
+							<button onClick={ this.onCl
