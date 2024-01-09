@@ -255,4 +255,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 								callback={ this.callbackPopupCreateRoom }
 							></PopupCreateRoom>
 
-							<button onClick={ this.onCl
+							<button onClick={ this.onClickJoinRoom }>Join a room</button>
+							<Popup
