@@ -256,4 +256,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							></PopupCreateRoom>
 
 							<button onClick={ this.onClickJoinRoom }>Join a room</button>
-							<Popup
+							<PopupJoin
+								ref={ this.refPopupJoinRoom }
+		
