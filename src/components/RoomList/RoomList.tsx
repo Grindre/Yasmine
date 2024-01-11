@@ -259,4 +259,7 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							<PopupJoin
 								ref={ this.refPopupJoinRoom }
 								callback={ this.callbackPopupJoin }
-							><
+							></PopupJoin>
+						</div>
+					) }
+				
