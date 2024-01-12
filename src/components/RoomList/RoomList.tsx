@@ -262,4 +262,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							></PopupJoin>
 						</div>
 					) }
-				
+				</div>
+				<div className="listContainer">
+					{ t
