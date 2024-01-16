@@ -265,4 +265,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				</div>
 				<div className="listContainer">
 					{ this.state.rooms.map( ( item : ChatRoomEntityItem ) =>
-						<div key={ item.roomId 
+						<div key={ item.roomId }
+						     data-id={ item.roomId }
+		
