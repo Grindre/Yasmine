@@ -267,4 +267,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 					{ this.state.rooms.map( ( item : ChatRoomEntityItem ) =>
 						<div key={ item.roomId }
 						     data-id={ item.roomId }
-						     className={ classnames( 'roomItem'
+						     className={ classnames( 'roomItem', { 'selected' : this.state.currentRoomId 
