@@ -268,4 +268,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 						<div key={ item.roomId }
 						     data-id={ item.roomId }
 						     className={ classnames( 'roomItem', { 'selected' : this.state.currentRoomId === item.roomId } ) }>
-							<div className="roomInfo
+							<div className="roomInfoBox" onClick={ ( _e ) =>
+							{
+					
