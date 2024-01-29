@@ -272,3 +272,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							{
 								this.onClickRoomItem( item.roomId );
 							} }>
+								<div className="roomName">
+						
