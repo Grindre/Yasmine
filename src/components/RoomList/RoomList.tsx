@@ -273,4 +273,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 								this.onClickRoomItem( item.roomId );
 							} }>
 								<div className="roomName">
-									{ ChatType.PRIVATE === item.chatType 
+									{ ChatType.PRIVATE === item.chatType ? 'Private' : 'Group' }
+									/
+									{ i
