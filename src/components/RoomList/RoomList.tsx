@@ -275,4 +275,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 								<div className="roomName">
 									{ ChatType.PRIVATE === item.chatType ? 'Private' : 'Group' }
 									/
-									{ item.name }({ Object.keys( item.members ).length }
+									{ item.name }({ Object.keys( item.members ).length })
+								</div>
+								<div className="ro
