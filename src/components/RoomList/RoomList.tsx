@@ -277,4 +277,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 									/
 									{ item.name }({ Object.keys( item.members ).length })
 								</div>
-								<div className="ro
+								<div className="roomId">{ item.roomId }</div>
+								
