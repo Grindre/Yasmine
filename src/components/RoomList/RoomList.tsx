@@ -278,4 +278,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 									{ item.name }({ Object.keys( item.members ).length })
 								</div>
 								<div className="roomId">{ item.roomId }</div>
-								
+								<div className="roomCreatedTime">{ new Date( it
