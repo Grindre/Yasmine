@@ -282,4 +282,6 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 							</div>
 							<div className="roomUnread">{ item.unread?.unreadCount } unread</div>
 							<div className="roomOptBox">
-								<a onClick={ (
+								<a onClick={ ( _e ) =>
+								{
+									this.onClickP
