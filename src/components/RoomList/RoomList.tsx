@@ -280,4 +280,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 								<div className="roomId">{ item.roomId }</div>
 								<div className="roomCreatedTime">{ new Date( item.timestamp ).toLocaleString() }</div>
 							</div>
-							<div className="roomUnread">
+							<div className="roomUnread">{ item.unread?.unreadCount } unread</div>
+							<d
