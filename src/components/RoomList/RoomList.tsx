@@ -290,4 +290,8 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 								<a onClick={ ( _e ) =>
 								{
 									this.onClickDeleteRoom( item.roomId );
-								} }>Delet
+								} }>Delete</a>
+							</div>
+						</div>
+					) }
+	
