@@ -298,4 +298,4 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				<div>
 					<PopupMemberList
 						ref={ this.refPopupMemberList }
-						ca
+						callback={ this.callbackPopupMemberList }
