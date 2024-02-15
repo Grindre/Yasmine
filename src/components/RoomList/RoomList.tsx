@@ -297,4 +297,5 @@ export class RoomList extends React.Component<ChatRoomListProps, ChatRoomListSta
 				</div>
 				<div>
 					<PopupMemberList
-	
+						ref={ this.refPopupMemberList }
+						ca
