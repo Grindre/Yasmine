@@ -1,3 +1,4 @@
 import { ReportHandler } from 'web-vitals';
 
-const reportWe
+const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+  
