@@ -1,1 +1,2 @@
-import { ChatRoomEn
+import { ChatRoomEntityItem } from "debeem-chat-client";
+i
