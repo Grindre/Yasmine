@@ -1,4 +1,6 @@
 import { ChatRoomEntityItem } from "debeem-chat-client";
 import {
 	ChatMessage,
-	ChatRoomEntityUnreadIte
+	ChatRoomEntityUnreadItem, ClientConnect,
+	ClientRoom,
+	ClientRoomLatest
