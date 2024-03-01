@@ -3,4 +3,5 @@ import {
 	ChatMessage,
 	ChatRoomEntityUnreadItem, ClientConnect,
 	ClientRoom,
-	ClientRoomLatest
+	ClientRoomLatestMessage,
+	VaChatRoomEntityItem, VaSendMess
