@@ -4,4 +4,5 @@ import {
 	ChatRoomEntityUnreadItem, ClientConnect,
 	ClientRoom,
 	ClientRoomLatestMessage,
-	VaChatRoomEntityItem, VaSendMess
+	VaChatRoomEntityItem, VaSendMessageRequest
+} from "debeem-cha
