@@ -7,4 +7,5 @@ import {
 	VaChatRoomEntityItem, VaSendMessageRequest
 } from "debeem-chat-client";
 import _ from "lodash";
-import { CountMessageRequ
+import { CountMessageRequest } from "debeem-chat-client";
+import { LatestMessa
