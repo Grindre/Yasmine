@@ -8,4 +8,5 @@ import {
 } from "debeem-chat-client";
 import _ from "lodash";
 import { CountMessageRequest } from "debeem-chat-client";
-import { LatestMessa
+import { LatestMessageUtil } from "../utils/LatestMessageUtil";
+impor
