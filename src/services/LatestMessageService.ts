@@ -9,4 +9,7 @@ import {
 import _ from "lodash";
 import { CountMessageRequest } from "debeem-chat-client";
 import { LatestMessageUtil } from "../utils/LatestMessageUtil";
-impor
+import { UserService } from "./UserService";
+
+/**
+ * 	@cl
