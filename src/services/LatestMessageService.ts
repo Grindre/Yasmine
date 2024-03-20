@@ -12,4 +12,6 @@ import { LatestMessageUtil } from "../utils/LatestMessageUtil";
 import { UserService } from "./UserService";
 
 /**
- * 	@cl
+ * 	@class LatestMessageService
+ */
+export class Lat
