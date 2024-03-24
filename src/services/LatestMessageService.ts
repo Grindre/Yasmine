@@ -16,4 +16,6 @@ import { UserService } from "./UserService";
  */
 export class LatestMessageService
 {
-	private clientConnect ! 
+	private clientConnect ! : ClientConnect;
+
+	private userService 
