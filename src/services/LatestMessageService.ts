@@ -14,4 +14,6 @@ import { UserService } from "./UserService";
 /**
  * 	@class LatestMessageService
  */
-export class Lat
+export class LatestMessageService
+{
+	private clientConnect ! 
