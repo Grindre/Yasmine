@@ -20,4 +20,6 @@ export class LatestMessageService
 
 	private userService = new UserService();
 	private clientRoom = new ClientRoom();
-	private clientRoomL
+	private clientRoomLatestMessage = new ClientRoomLatestMessage();
+
+	co
