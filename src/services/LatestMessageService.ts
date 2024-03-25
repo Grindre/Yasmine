@@ -18,4 +18,5 @@ export class LatestMessageService
 {
 	private clientConnect ! : ClientConnect;
 
-	private userService 
+	private userService = new UserService();
+	private clientRoom = new Cli
