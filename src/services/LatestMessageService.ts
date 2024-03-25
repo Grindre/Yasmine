@@ -19,4 +19,5 @@ export class LatestMessageService
 	private clientConnect ! : ClientConnect;
 
 	private userService = new UserService();
-	private clientRoom = new Cli
+	private clientRoom = new ClientRoom();
+	private clientRoomL
