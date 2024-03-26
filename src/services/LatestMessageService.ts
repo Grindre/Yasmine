@@ -22,4 +22,5 @@ export class LatestMessageService
 	private clientRoom = new ClientRoom();
 	private clientRoomLatestMessage = new ClientRoomLatestMessage();
 
-	co
+	constructor( clientConnect : ClientConnect )
+	{
