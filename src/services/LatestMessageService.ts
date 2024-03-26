@@ -26,3 +26,7 @@ export class LatestMessageService
 	{
 		this.clientConnect = clientConnect;
 	}
+
+
+	/**
+	 * 	try to query the number of unrea
