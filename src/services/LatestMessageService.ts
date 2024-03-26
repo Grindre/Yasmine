@@ -30,4 +30,6 @@ export class LatestMessageService
 
 	/**
 	 * 	try to query the number of unread messages for room
-	 *	@returns {Promise<bool
+	 *	@returns {Promise<boolean>}
+	 */
+	public countMessage( roomId ?: stri
