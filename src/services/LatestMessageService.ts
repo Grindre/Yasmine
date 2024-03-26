@@ -24,3 +24,5 @@ export class LatestMessageService
 
 	constructor( clientConnect : ClientConnect )
 	{
+		this.clientConnect = clientConnect;
+	}
