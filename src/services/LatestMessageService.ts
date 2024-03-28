@@ -34,4 +34,6 @@ export class LatestMessageService
 	 */
 	public countMessage( roomId ?: string ) : Promise<boolean>
 	{
-		return new Promi
+		return new Promise( async ( resolve, reject ) =>
+		{
+			tr
