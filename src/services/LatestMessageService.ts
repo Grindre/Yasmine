@@ -40,4 +40,4 @@ export class LatestMessageService
 			{
 				if ( ! this.clientConnect )
 				{
-					return re
+					return reject( `${ this.constructor.name }.coun
