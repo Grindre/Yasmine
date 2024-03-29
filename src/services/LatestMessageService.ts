@@ -36,4 +36,8 @@ export class LatestMessageService
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
-			tr
+			try
+			{
+				if ( ! this.clientConnect )
+				{
+					return re
