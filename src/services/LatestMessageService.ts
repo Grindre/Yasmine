@@ -40,4 +40,5 @@ export class LatestMessageService
 			{
 				if ( ! this.clientConnect )
 				{
-					return reject( `${ this.constructor.name }.coun
+					return reject( `${ this.constructor.name }.countMessage :: invalid walletObj null` );
+			
