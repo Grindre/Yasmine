@@ -46,4 +46,4 @@ export class LatestMessageService
 				const walletObj = this.userService.getWallet();
 				if ( ! walletObj )
 				{
-					retu
+					return reject( `${ this.constructor.name }.count
