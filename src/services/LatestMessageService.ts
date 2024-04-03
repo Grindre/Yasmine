@@ -41,4 +41,6 @@ export class LatestMessageService
 				if ( ! this.clientConnect )
 				{
 					return reject( `${ this.constructor.name }.countMessage :: invalid walletObj null` );
-			
+				}
+
+				const walletObj = this.userService
