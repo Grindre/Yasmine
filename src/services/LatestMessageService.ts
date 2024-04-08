@@ -49,4 +49,5 @@ export class LatestMessageService
 					return reject( `${ this.constructor.name }.countMessage :: invalid walletObj null` );
 				}
 
+				let rooms : Array<ChatRoomEntityItem> = [];
 		
