@@ -46,4 +46,7 @@ export class LatestMessageService
 				const walletObj = this.userService.getWallet();
 				if ( ! walletObj )
 				{
-					return reject( `${ this.constructor.name }.count
+					return reject( `${ this.constructor.name }.countMessage :: invalid walletObj null` );
+				}
+
+		
