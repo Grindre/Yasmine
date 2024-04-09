@@ -51,4 +51,7 @@ export class LatestMessageService
 
 				let rooms : Array<ChatRoomEntityItem> = [];
 				if ( roomId &&
-					null === VaChatRoomEntityItem
+					null === VaChatRoomEntityItem.isValidRoomId( roomId ) )
+				{
+					//
+					/
