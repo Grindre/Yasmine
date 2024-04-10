@@ -56,4 +56,4 @@ export class LatestMessageService
 					//
 					//	query the specified room
 					//
-					co
+					const roomItem : ChatRoomEntityItem | null = await th
