@@ -54,4 +54,6 @@ export class LatestMessageService
 					null === VaChatRoomEntityItem.isValidRoomId( roomId ) )
 				{
 					//
-					/
+					//	query the specified room
+					//
+					co
