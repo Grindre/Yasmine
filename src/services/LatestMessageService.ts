@@ -59,4 +59,4 @@ export class LatestMessageService
 					const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, roomId );
 					if ( ! roomItem )
 					{
-						retur
+						return reject( `${ this.constructor.name }.
