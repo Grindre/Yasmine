@@ -56,4 +56,7 @@ export class LatestMessageService
 					//
 					//	query the specified room
 					//
-					const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, roomI
+					const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, roomId );
+					if ( ! roomItem )
+					{
+						retur
