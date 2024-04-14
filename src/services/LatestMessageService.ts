@@ -61,4 +61,8 @@ export class LatestMessageService
 					{
 						return reject( `${ this.constructor.name }.countMessage :: room(${ roomId }) not found` );
 					}
-					room
+					rooms.push( roomItem );
+				}
+				else
+				{
+					//
