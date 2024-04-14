@@ -66,3 +66,6 @@ export class LatestMessageService
 				else
 				{
 					//
+					//	query all rooms
+					//
+	
