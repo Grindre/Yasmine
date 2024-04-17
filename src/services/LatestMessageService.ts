@@ -68,4 +68,4 @@ export class LatestMessageService
 					//
 					//	query all rooms
 					//
-	
+					rooms = await this.clientRo
