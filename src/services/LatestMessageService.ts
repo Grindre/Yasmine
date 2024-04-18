@@ -68,4 +68,6 @@ export class LatestMessageService
 					//
 					//	query all rooms
 					//
-					rooms = await this.clientRo
+					rooms = await this.clientRoom.queryRooms( walletObj.address );
+				}
+		
