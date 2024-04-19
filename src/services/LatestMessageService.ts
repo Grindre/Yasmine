@@ -72,4 +72,7 @@ export class LatestMessageService
 				}
 				if ( ! Array.isArray( rooms ) )
 				{
-		
+					return resolve( false );
+				}
+
+				let queryOptions
