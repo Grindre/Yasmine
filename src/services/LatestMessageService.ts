@@ -75,4 +75,5 @@ export class LatestMessageService
 					return resolve( false );
 				}
 
-				let queryOptions
+				let queryOptions : Array<any> = [];
+				for ( const room of ro
