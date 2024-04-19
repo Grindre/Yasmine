@@ -70,4 +70,6 @@ export class LatestMessageService
 					//
 					rooms = await this.clientRoom.queryRooms( walletObj.address );
 				}
+				if ( ! Array.isArray( rooms ) )
+				{
 		
