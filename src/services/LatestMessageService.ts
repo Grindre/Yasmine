@@ -76,4 +76,6 @@ export class LatestMessageService
 				}
 
 				let queryOptions : Array<any> = [];
-				for ( const room of ro
+				for ( const room of rooms )
+				{
+					const errorRoom = VaChatRoomEntity
