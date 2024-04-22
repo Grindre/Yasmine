@@ -78,4 +78,5 @@ export class LatestMessageService
 				let queryOptions : Array<any> = [];
 				for ( const room of rooms )
 				{
-					const errorRoom = VaChatRoomEntity
+					const errorRoom = VaChatRoomEntityItem.validateChatRoomEntityItem( room );
+					if ( nul
