@@ -79,4 +79,6 @@ export class LatestMessageService
 				for ( const room of rooms )
 				{
 					const errorRoom = VaChatRoomEntityItem.validateChatRoomEntityItem( room );
-					if ( nul
+					if ( null !== errorRoom )
+					{
+						continue;
