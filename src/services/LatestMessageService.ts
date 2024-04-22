@@ -82,3 +82,6 @@ export class LatestMessageService
 					if ( null !== errorRoom )
 					{
 						continue;
+					}
+
+					const latestTimestamp : number | unde
