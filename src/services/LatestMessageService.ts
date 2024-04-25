@@ -84,4 +84,4 @@ export class LatestMessageService
 						continue;
 					}
 
-					const latestTimestamp : number | unde
+					const latestTimestamp : number | undefined = _.isNumber( room?.latestMessage?.timesta
