@@ -85,4 +85,6 @@ export class LatestMessageService
 					}
 
 					const latestTimestamp : number | undefined = _.isNumber( room?.latestMessage?.timestamp ) ? room?.latestMessage?.timestamp : 0;
-			
+					queryOptions.push( {
+						channel : room.roomId,
+		
