@@ -88,4 +88,8 @@ export class LatestMessageService
 					queryOptions.push( {
 						channel : room.roomId,
 						startTimestamp : latestTimestamp,
-						la
+						lastElement : 3,
+					} )
+				}
+
+				const count
