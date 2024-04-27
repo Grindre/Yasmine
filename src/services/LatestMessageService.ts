@@ -92,4 +92,5 @@ export class LatestMessageService
 					} )
 				}
 
-				const countMessageRequest : CountMessageRequ
+				const countMessageRequest : CountMessageRequest = {
+					options : queryOptions
