@@ -92,4 +92,4 @@ export class LatestMessageService
 					} )
 				}
 
-				const count
+				const countMessageRequest : CountMessageRequ
