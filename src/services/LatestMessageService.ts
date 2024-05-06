@@ -95,4 +95,5 @@ export class LatestMessageService
 				const countMessageRequest : CountMessageRequest = {
 					options : queryOptions
 				};
-				console.log( `${ this.constructor.name }.countMessage :: 🍄 countMessageRequest: `, c
+				console.log( `${ this.constructor.name }.countMessage :: 🍄 countMessageRequest: `, countMessageRequest );
+				this.clientConne
