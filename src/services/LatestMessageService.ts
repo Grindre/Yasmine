@@ -99,4 +99,7 @@ export class LatestMessageService
 				this.clientConnect.countMessage( countMessageRequest, async ( response : any ) =>
 				{
 					console.log( `${ this.constructor.name }.countMessage :: 🍄 response: `, response );
-					await th
+					await this.storeUnread( response );
+
+					//	...
+					resolv
