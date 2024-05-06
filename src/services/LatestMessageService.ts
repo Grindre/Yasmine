@@ -96,4 +96,4 @@ export class LatestMessageService
 					options : queryOptions
 				};
 				console.log( `${ this.constructor.name }.countMessage :: 🍄 countMessageRequest: `, countMessageRequest );
-				this.clientConne
+				this.clientConnect.countMessage( countMessageRequest, async ( res
