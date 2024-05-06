@@ -98,4 +98,4 @@ export class LatestMessageService
 				console.log( `${ this.constructor.name }.countMessage :: 🍄 countMessageRequest: `, countMessageRequest );
 				this.clientConnect.countMessage( countMessageRequest, async ( response : any ) =>
 				{
-					console.log( `${ 
+					console.log( `${ this.constructor.name }.countMessage :: 🍄
