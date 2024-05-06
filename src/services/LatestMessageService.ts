@@ -102,4 +102,9 @@ export class LatestMessageService
 					await this.storeUnread( response );
 
 					//	...
-					resolv
+					resolve( true );
+				} );
+			}
+			catch ( err )
+			{
+	
