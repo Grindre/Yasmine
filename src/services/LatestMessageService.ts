@@ -107,4 +107,10 @@ export class LatestMessageService
 			}
 			catch ( err )
 			{
-	
+				reject( err );
+			}
+		} );
+	}
+
+	/**
+	 * 	try to save l
