@@ -113,4 +113,4 @@ export class LatestMessageService
 	}
 
 	/**
-	 * 	try to save l
+	 * 	try to save latest message and unread count to the local d
