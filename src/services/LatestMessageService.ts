@@ -119,4 +119,4 @@ export class LatestMessageService
 	 */
 	public storeUnread( response : any ) : Promise<boolean>
 	{
-		return new Pro
+		return new Promise( async ( resolve, reject ) =>
