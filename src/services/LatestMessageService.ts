@@ -117,4 +117,6 @@ export class LatestMessageService
 	 *	@param response		{any}
 	 *	@returns {Promise<boolean>}
 	 */
-	public storeUnre
+	public storeUnread( response : any ) : Promise<boolean>
+	{
+		return new Pro
