@@ -115,4 +115,6 @@ export class LatestMessageService
 	/**
 	 * 	try to save latest message and unread count to the local database
 	 *	@param response		{any}
-	 *	@returns {Promis
+	 *	@returns {Promise<boolean>}
+	 */
+	public storeUnre
