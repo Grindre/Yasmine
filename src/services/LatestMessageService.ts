@@ -120,3 +120,7 @@ export class LatestMessageService
 	public storeUnread( response : any ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const walletObj = t
