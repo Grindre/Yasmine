@@ -129,4 +129,4 @@ export class LatestMessageService
 					return reject( `${ this.constructor.name }.storeUnread :: invalid walletObj null` );
 				}
 
-				const unreadLis
+				const unreadList : Array<ChatRoomEntityUnreadItem> = LatestMess
