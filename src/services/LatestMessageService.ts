@@ -130,4 +130,6 @@ export class LatestMessageService
 				}
 
 				const unreadList : Array<ChatRoomEntityUnreadItem> = LatestMessageUtil.parseChatRoomEntityUnreadItem( response );
-				if ( Array.is
+				if ( Array.isArray( unreadList ) )
+				{
+		
