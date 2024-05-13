@@ -129,4 +129,5 @@ export class LatestMessageService
 					return reject( `${ this.constructor.name }.storeUnread :: invalid walletObj null` );
 				}
 
-				const unreadList : Array<ChatRoomEntityUnreadItem> = LatestMessageUtil.parseChatRoomEntityUnr
+				const unreadList : Array<ChatRoomEntityUnreadItem> = LatestMessageUtil.parseChatRoomEntityUnreadItem( response );
+				if ( Array.is
