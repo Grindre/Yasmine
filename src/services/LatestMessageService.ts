@@ -134,4 +134,6 @@ export class LatestMessageService
 				{
 					for ( let unreadItem of unreadList )
 					{
-				
+						if ( ! unreadItem )
+						{
+							contin
