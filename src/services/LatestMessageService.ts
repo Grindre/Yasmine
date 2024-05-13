@@ -136,4 +136,7 @@ export class LatestMessageService
 					{
 						if ( ! unreadItem )
 						{
-							contin
+							continue;
+						}
+
+						if ( unreadItem.unreadCount > 0
