@@ -139,4 +139,7 @@ export class LatestMessageService
 							continue;
 						}
 
-						if ( unreadItem.unreadCount > 0
+						if ( unreadItem.unreadCount > 0 )
+						{
+							unreadItem.unreadCount --;
+	
