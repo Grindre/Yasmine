@@ -142,4 +142,6 @@ export class LatestMessageService
 						if ( unreadItem.unreadCount > 0 )
 						{
 							unreadItem.unreadCount --;
-	
+						}
+
+						console.log( `${ this.constru
