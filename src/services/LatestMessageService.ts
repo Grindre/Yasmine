@@ -144,4 +144,4 @@ export class LatestMessageService
 							unreadItem.unreadCount --;
 						}
 
-						console.log( `${ this.constru
+						console.log( `${ this.constructor.name }.storeUnread :: clientRoomLatestMessa
