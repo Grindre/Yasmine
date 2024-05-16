@@ -155,4 +155,9 @@ export class LatestMessageService
 			{
 				reject( err );
 			}
-	
+		} );
+	}
+
+	/**
+	 * 	store latest message
+	 *	@param
