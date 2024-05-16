@@ -160,4 +160,5 @@ export class LatestMessageService
 
 	/**
 	 * 	store latest message
-	 *	@param
+	 *	@param roomId		{string}
+	 *	@param chatMessage	{ChatM
