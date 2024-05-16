@@ -151,4 +151,8 @@ export class LatestMessageService
 
 				return resolve( true );
 			}
-			catc
+			catch ( err )
+			{
+				reject( err );
+			}
+	
