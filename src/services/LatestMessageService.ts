@@ -145,4 +145,4 @@ export class LatestMessageService
 						}
 
 						console.log( `${ this.constructor.name }.storeUnread :: clientRoomLatestMessage.updateUnread for ${ walletObj.address }.${ unreadItem.roomId }` );
-						await thi
+						await this.clientRoomLatestMessage.updateUnread( walletObj.a
