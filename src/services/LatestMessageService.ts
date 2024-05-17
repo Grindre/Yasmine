@@ -161,4 +161,5 @@ export class LatestMessageService
 	/**
 	 * 	store latest message
 	 *	@param roomId		{string}
-	 *	@param chatMessage	{ChatM
+	 *	@param chatMessage	{ChatMessage}
+	 *	@returns {Promise<boolean>}
