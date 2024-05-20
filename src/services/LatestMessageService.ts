@@ -164,4 +164,4 @@ export class LatestMessageService
 	 *	@param chatMessage	{ChatMessage}
 	 *	@returns {Promise<boolean>}
 	 */
-	public storeLatestMessage( roomId : str
+	public storeLatestMessage( roomId : string, chatMessage : ChatMessage ) : Promise<boolean
