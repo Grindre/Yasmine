@@ -166,4 +166,8 @@ export class LatestMessageService
 	 */
 	public storeLatestMessage( roomId : string, chatMessage : ChatMessage ) : Promise<boolean>
 	{
-		return new Promise( async ( resolve, reje
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const walletObj
