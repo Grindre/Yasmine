@@ -173,4 +173,4 @@ export class LatestMessageService
 				const walletObj = this.userService.getWallet();
 				if ( ! walletObj )
 				{
-					return re
+					return reject( `${ this.constructor.name }.storeLatestMess
