@@ -171,4 +171,6 @@ export class LatestMessageService
 			try
 			{
 				const walletObj = this.userService.getWallet();
-				
+				if ( ! walletObj )
+				{
+					return re
