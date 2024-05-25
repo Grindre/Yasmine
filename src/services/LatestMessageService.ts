@@ -174,3 +174,6 @@ export class LatestMessageService
 				if ( ! walletObj )
 				{
 					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid walletObj null` );
+				}
+
+				if ( null !== VaChatRoomEntityItem.isValid
