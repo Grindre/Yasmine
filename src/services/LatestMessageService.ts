@@ -178,4 +178,4 @@ export class LatestMessageService
 
 				if ( null !== VaChatRoomEntityItem.isValidRoomId( roomId ) )
 				{
-					return reject(
+					return reject( `${ this.constructor.name }.storeLatestMessage :: 
