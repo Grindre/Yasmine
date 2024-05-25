@@ -178,4 +178,6 @@ export class LatestMessageService
 
 				if ( null !== VaChatRoomEntityItem.isValidRoomId( roomId ) )
 				{
-					return reject( `${ this.constructor.name }.storeLatestMessage :: 
+					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid roomId` );
+				}
+				if ( null !== VaSendM
