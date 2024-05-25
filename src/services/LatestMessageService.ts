@@ -180,4 +180,6 @@ export class LatestMessageService
 				{
 					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid roomId` );
 				}
-				if ( null !== VaSendMessageRequest.validateSendMessageRequest({ payload: chatM
+				if ( null !== VaSendMessageRequest.validateSendMessageRequest({ payload: chatMessage } ) )
+				{
+					return reject( `${ thi
