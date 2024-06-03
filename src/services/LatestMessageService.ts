@@ -185,4 +185,4 @@ export class LatestMessageService
 					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid chatMessage` );
 				}
 
-				console.l
+				console.log( `${ this.constructor.name }.storeLatestMessage :: 🌈🌈
