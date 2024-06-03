@@ -182,4 +182,7 @@ export class LatestMessageService
 				}
 				if ( null !== VaSendMessageRequest.validateSendMessageRequest({ payload: chatMessage } ) )
 				{
-					return reject( `${ this.constructor.name }.storeLatestMessage :: inval
+					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid chatMessage` );
+				}
+
+				console.l
