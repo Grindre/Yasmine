@@ -185,4 +185,4 @@ export class LatestMessageService
 					return reject( `${ this.constructor.name }.storeLatestMessage :: invalid chatMessage` );
 				}
 
-				console.log( `${ this.constructor.name }.storeLatestMessage :: 🌈🌈🌈 will clientRoomLatestMessage.updateLatestM
+				console.log( `${ this.constructor.name }.storeLatestMessage :: 🌈🌈🌈 will clientRoomLatestMessage.updateLatestMessage for ${ walletObj.address }.${ roomId }` );
