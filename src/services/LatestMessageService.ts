@@ -186,3 +186,6 @@ export class LatestMessageService
 				}
 
 				console.log( `${ this.constructor.name }.storeLatestMessage :: 🌈🌈🌈 will clientRoomLatestMessage.updateLatestMessage for ${ walletObj.address }.${ roomId }` );
+
+				//	...
+				let storeLatestMessage : ChatMes
