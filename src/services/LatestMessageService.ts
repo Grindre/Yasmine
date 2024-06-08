@@ -192,4 +192,8 @@ export class LatestMessageService
 				if ( ! storeLatestMessage ||
 					chatMessage.timestamp > storeLatestMessage.timestamp )
 				{
-					await this.clientRoomLatestMessage.updateLatestMessage( walletObj.address, r
+					await this.clientRoomLatestMessage.updateLatestMessage( walletObj.address, roomId, chatMessage );
+				}
+
+				//	...
+				return r
