@@ -190,4 +190,6 @@ export class LatestMessageService
 				//	...
 				let storeLatestMessage : ChatMessage | null = await this.clientRoomLatestMessage.queryLatestMessage( walletObj.address, roomId );
 				if ( ! storeLatestMessage ||
-					chatMessage.timestamp > storeLatestMessage.timestam
+					chatMessage.timestamp > storeLatestMessage.timestamp )
+				{
+					await this.clientRoomLatestMessa
