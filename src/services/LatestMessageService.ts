@@ -198,4 +198,8 @@ export class LatestMessageService
 				//	...
 				return resolve( true );
 			}
-			catch
+			catch ( err )
+			{
+				reject( err );
+			}
+		}
