@@ -196,4 +196,6 @@ export class LatestMessageService
 				}
 
 				//	...
-				return r
+				return resolve( true );
+			}
+			catch
