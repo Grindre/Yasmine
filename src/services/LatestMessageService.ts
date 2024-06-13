@@ -202,4 +202,6 @@ export class LatestMessageService
 			{
 				reject( err );
 			}
-		}
+		} );
+	}
+}
