@@ -70,3 +70,47 @@ export class MessageService
 						pageSize : PageUtil.getSafePageSize( pageSize ),
 						order : PaginationOrder.DESC
 					}
+				} as PullMessageRequest, ( response : PullMessageResponse ) : void =>
+				{
+					console.log( `${ this.constructor.name }.pullMessage :: 🐹 pull data from the specified room and return the response: `, response );
+					if ( ! _.isObject( response ) ||
+						! _.has( response, 'status' ) ||
+						! _.has( response, 'list' ) )
+					{
+						return reject( `${ this.constructor.name }.pullMessage :: invalid response` );
+					}
+
+					//	...
+					let messageList : Array<SendMessageRequest> = [];
+					if ( Array.isArray( response?.list ) &&
+						response?.list?.length > 0 )
+					{
+						for ( const item of response.list )
+						{
+							if ( ! _.isObject( item ) || ! _.isObject( item.data ) )
+							{
+								continue;
+							}
+							if ( null !== VaSendMessageRequest.validateSendMessageRequest( item.data ) )
+							{
+								continue;
+							}
+
+							messageList.push( item.data );
+						}
+					}
+
+					resolve( messageList );
+				} );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+
+	/**
+	 *	@param messageList	{Array<SendMessageRequest>}
+	 *	@returns {Promise<DecryptedMessageList | null>}
+	 */
