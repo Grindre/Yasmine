@@ -114,3 +114,39 @@ export class MessageService
 	 *	@param messageList	{Array<SendMessageRequest>}
 	 *	@returns {Promise<DecryptedMessageList | null>}
 	 */
+	public decryptMessageList( messageList : Array<SendMessageRequest> ) : Promise<DecryptedMessageList | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! Array.isArray( messageList ) || 0 === messageList.length )
+				{
+					return resolve( null );
+					//return reject( `${ this.constructor.name }.decryptMessageList :: invalid messageList` );
+				}
+
+				const decryptedMessageList : Array<ChatMessage> = [];
+				for ( const message of messageList )
+				{
+					if ( null !== VaSendMessageRequest.validateSendMessageRequest( message ) )
+					{
+						continue;
+					}
+
+					//	decrypted message
+					const decryptedMessage : SendMessageRequest = await this.decryptMessage( message );
+					decryptedMessageList.push( decryptedMessage.payload );
+				}
+				if ( 0 === decryptedMessageList.length )
+				{
+					return resolve( null );
+				}
+
+				/**
+				 * 	sort the decrypted message list by .timestamp ASC
+				 */
+				decryptedMessageList.sort( ( a : ChatMessage, b : ChatMessage ) => a.timestamp - b.timestamp );
+
+				//	...
+				resolve({
