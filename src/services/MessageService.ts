@@ -191,3 +191,53 @@ export class MessageService
 
 				//console.log( `🌷 this roomItem :`, roomItem );
 				//console.log( `🌷 message :`, message );
+
+				if ( roomItem.chatType !== message.payload.chatType )
+				{
+					return reject( `${ this.constructor.name }.decryptMessage :: chatType does not match` );
+				}
+
+				//	...
+				if ( ChatType.PRIVATE === roomItem.chatType )
+				{
+					const messageMember : ChatRoomMember = {
+						memberType : ChatRoomMemberType.MEMBER,
+						wallet : String( message.payload.wallet ).trim().toLowerCase(),
+						publicKey : message.payload.publicKey,
+						userName : message.payload.fromName,
+						userAvatar : message.payload.fromAvatar,
+						timestamp : message.payload.timestamp,
+					};
+					const tryRoomItem : ChatRoomEntityItem = _.cloneDeep( roomItem );
+					tryRoomItem.members[ messageMember.wallet ] = messageMember;
+
+					//console.log( `🌷 tryRoomItem :`, tryRoomItem );
+
+					const decryptedBody = await new PrivateMessageCrypto().decryptMessage(
+						message.payload.body,
+						tryRoomItem,
+						walletObj.address,
+						walletObj.privateKey
+					);
+					//console.log( `🌷 decryptedBody :`, decryptedBody );
+					if ( this.isValidDecryptedBody( message, decryptedBody ) )
+					{
+						//	decrypt successfully, tries to save the member
+						try
+						{
+							await this.clientRoom.putMember( walletObj.address, roomItem.roomId, messageMember );
+						}
+						catch ( err )
+						{
+						}
+					}
+					message.payload.body = decryptedBody;
+				}
+				else if ( ChatType.GROUP === roomItem.chatType )
+				{
+					const messageMember : ChatRoomMember = {
+						memberType : ChatRoomMemberType.MEMBER,
+						wallet : String( message.payload.wallet ).trim().toLowerCase(),
+						publicKey : message.payload.publicKey,
+						userName : message.payload.fromName,
+						userAvatar : message.payload.fromAvatar,
