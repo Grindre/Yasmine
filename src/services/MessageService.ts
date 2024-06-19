@@ -150,3 +150,44 @@ export class MessageService
 
 				//	...
 				resolve({
+					oldest	: decryptedMessageList[ 0 ],
+					latest	: decryptedMessageList[ decryptedMessageList.length - 1 ],
+					list	: decryptedMessageList
+				});
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	@param message		{SendMessageRequest}
+	 *	@returns {SendMessageRequest}
+	 */
+	public decryptMessage( message : SendMessageRequest ) : Promise<SendMessageRequest>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( null !== VaSendMessageRequest.validateSendMessageRequest( message ) )
+				{
+					return reject( `${ this.constructor.name }.decryptMessage :: invalid message` );
+				}
+
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `${ this.constructor.name }.decryptMessage :: wallet not initialized` );
+				}
+
+				const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, message.payload.roomId );
+				if ( ! roomItem )
+				{
+					return reject( `${ this.constructor.name }.decryptMessage :: room not ready` );
+				}
+
+				//console.log( `🌷 this roomItem :`, roomItem );
+				//console.log( `🌷 message :`, message );
