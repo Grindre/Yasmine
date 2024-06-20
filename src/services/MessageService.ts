@@ -241,3 +241,50 @@ export class MessageService
 						publicKey : message.payload.publicKey,
 						userName : message.payload.fromName,
 						userAvatar : message.payload.fromAvatar,
+						timestamp : message.payload.timestamp,
+					};
+					const decryptedBody = await new GroupMessageCrypto().decryptMessage( message.payload.body, roomItem, `` );
+					//console.log( `🌷 decryptedBody :`, decryptedBody );
+					if ( this.isValidDecryptedBody( message, decryptedBody ) )
+					{
+						//	decrypt successfully, tries to save the member
+						try
+						{
+							await this.clientRoom.putMember( walletObj.address, roomItem.roomId, messageMember );
+						}
+						catch ( err )
+						{
+						}
+					}
+					message.payload.body = decryptedBody;
+				}
+
+				resolve( message );
+			}
+			catch ( err )
+			{
+				console.error( `${ this.constructor.name }.decryptMessage :: 🔥 error:`, err );
+				resolve( message );
+			}
+		} );
+	}
+
+	/**
+	 *	@param message		{SendMessageRequest}
+	 *	@param decryptedBody	{any}
+	 *	@returns {boolean}
+	 */
+	public isValidDecryptedBody( message : SendMessageRequest, decryptedBody : any ) : boolean
+	{
+		if ( ! message )
+		{
+			return false;
+		}
+
+		return _.isString( decryptedBody ) && ! _.isEmpty( decryptedBody ) &&
+			_.isString( message.payload.body ) && ! _.isEmpty( message.payload.body ) &&
+			decryptedBody !== message.payload.body &&
+			message.payload.body.length > decryptedBody.length;
+	}
+
+	/**
