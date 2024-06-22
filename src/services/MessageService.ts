@@ -288,3 +288,40 @@ export class MessageService
 	}
 
 	/**
+	 *	@param roomId		{string}
+	 *	@param messageType	{MessageType}
+	 *	@param messageBody	{any}
+	 */
+	public sendMessage( roomId : string, messageType : MessageType, messageBody : any ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const errorRoomId : string | null = VaChatRoomEntityItem.isValidRoomId( roomId );
+				if ( null !== errorRoomId )
+				{
+					return reject( `${ this.constructor.name }.sendMessage :: ${ errorRoomId }` );
+				}
+
+				const walletObj = this.userService.getWallet();
+				if ( ! walletObj )
+				{
+					return reject( `${ this.constructor.name }.sendMessage :: wallet not initialized` );
+				}
+
+				const roomItem : ChatRoomEntityItem | null = await this.clientRoom.queryRoom( walletObj.address, roomId );
+				if ( ! roomItem )
+				{
+					return reject( `${ this.constructor.name }.sendMessage :: room not ready` );
+				}
+
+				if ( null !== VaSendMessageRequest.isValidMessageType( messageType ) )
+				{
+					return reject( `${ this.constructor.name }.sendMessage :: invalid messageType` );
+				}
+				if ( ! _.isObject( messageBody ) &&
+					! _.isString( messageBody ) &&
+					! _.isNumber( messageBody ) )
+				{
+					return reject( `${ this.constructor.name }.sendMessage :: invalid messageBody` );
