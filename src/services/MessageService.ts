@@ -325,3 +325,47 @@ export class MessageService
 					! _.isNumber( messageBody ) )
 				{
 					return reject( `${ this.constructor.name }.sendMessage :: invalid messageBody` );
+				}
+
+				const pinCode = ``;
+				const userName = this.userService.getUserName() ?? `[Anonymous]`;
+				const callback : ResponseCallback = ( response : any ) : void =>
+				{
+					console.log( `${ this.constructor.name }.sendMessage :: 🍔 send message response: `, response );
+				};
+				const publicKey : string | undefined = ( ChatType.PRIVATE === roomItem.chatType ) ? walletObj.publicKey : undefined;
+				const body : string = _.isObject( messageBody ) ? JSON.stringify( messageBody ) : String( messageBody );
+				let chatMessage : ChatMessage = {
+					roomId : roomId,			//	messages will be sent to this chat room
+					chatType : roomItem.chatType,		//	private or group
+					messageType : messageType,		//	user message. added @2024-04-05
+					wallet : walletObj.address,		//	person who sent the message
+					publicKey : publicKey,
+					fromName : userName,
+					fromAvatar : `https://www.avatar.com/aaa.jgp`,
+					body : body,					//	message body
+					timestamp : new Date().getTime(),
+					hash : '',
+					sig : '',
+				};
+
+				if ( ChatType.PRIVATE === roomItem.chatType )
+				{
+					console.log( `${ this.constructor.name }.sendMessage :: will send private message: `, chatMessage );
+					this.clientConnect.sendPrivateMessage( walletObj.privateKey, chatMessage, callback );
+				}
+				else if ( ChatType.GROUP === roomItem.chatType )
+				{
+					console.log( `${ this.constructor.name }.sendMessage :: will send group message: `, chatMessage );
+					this.clientConnect.sendGroupMessage( walletObj.privateKey, chatMessage, pinCode, callback );
+				}
+
+				resolve( true );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
+	}
+}
