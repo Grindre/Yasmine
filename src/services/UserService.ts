@@ -6,3 +6,4 @@ import _ from "lodash";
  */
 export class UserService
 {
+	private mnemonicList : Array<string> = [
