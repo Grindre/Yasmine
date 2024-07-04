@@ -15,4 +15,6 @@ export class UserService
 	private userNameList : Array<string> = [ 'Alice', 'Bob', 'Mary' ];
 
 	//
-	//	create a walle
+	//	create a wallet by mnemonic
+	//
+	private walletObj : TWallet
