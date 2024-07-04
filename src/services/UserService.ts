@@ -8,3 +8,4 @@ export class UserService
 {
 	private mnemonicList : Array<string> = [
 		'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+		'evidence cement snap basket genre fan
