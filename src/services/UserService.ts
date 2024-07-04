@@ -12,4 +12,7 @@ export class UserService
 		'electric shoot legal trial crane rib garlic claw armed snow blind advance'
 	];
 
-	private userNameList : Array<string> = [ 'Alice
+	private userNameList : Array<string> = [ 'Alice', 'Bob', 'Mary' ];
+
+	//
+	//	create a walle
