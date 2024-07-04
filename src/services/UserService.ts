@@ -17,4 +17,8 @@ export class UserService
 	//
 	//	create a wallet by mnemonic
 	//
-	private walletObj : TWallet
+	private walletObj : TWalletBaseItem | null = null;
+
+
+	/**
+	 *
