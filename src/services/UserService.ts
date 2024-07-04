@@ -21,4 +21,5 @@ export class UserService
 
 
 	/**
-	 *
+	 * 	change current user
+	 *	@param userId	{number
