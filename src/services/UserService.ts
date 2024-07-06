@@ -27,4 +27,6 @@ export class UserService
 	 */
 	public changeUser( userId : number ) : void
 	{
-		if ( ! _.isNumber( userId ) || userId <= 0 || userId > this.mnemo
+		if ( ! _.isNumber( userId ) || userId <= 0 || userId > this.mnemonicList.length )
+		{
+			throw new Error( `$
