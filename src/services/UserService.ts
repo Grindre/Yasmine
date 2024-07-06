@@ -27,4 +27,4 @@ export class UserService
 	 */
 	public changeUser( userId : number ) : void
 	{
-		if ( ! _.isNumber( user
+		if ( ! _.isNumber( userId ) || userId <= 0 || userId > this.mnemo
