@@ -25,4 +25,6 @@ export class UserService
 	 *	@param userId	{number}
 	 *	@returns {void}
 	 */
-	public chan
+	public changeUser( userId : number ) : void
+	{
+		if ( ! _.isNumber( user
