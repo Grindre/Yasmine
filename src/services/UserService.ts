@@ -29,4 +29,4 @@ export class UserService
 	{
 		if ( ! _.isNumber( userId ) || userId <= 0 || userId > this.mnemonicList.length )
 		{
-			throw new Error( `$
+			throw new Error( `${ this.constructor.name }.change
