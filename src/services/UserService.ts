@@ -32,4 +32,4 @@ export class UserService
 			throw new Error( `${ this.constructor.name }.changeUser :: invalid userId` );
 		}
 
-		console.log( `⭐️ ${ this.constructor.name }.changeUser :: user
+		console.log( `⭐️ ${ this.constructor.name }.changeUser :: user changed to: `, userId, this.userNameList[
