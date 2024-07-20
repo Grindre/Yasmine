@@ -33,4 +33,5 @@ export class UserService
 		}
 
 		console.log( `⭐️ ${ this.constructor.name }.changeUser :: user changed to: `, userId, this.userNameList[ userId - 1 ], this.mnemonicList[ userId - 1 ] );
-		localStorage.setItem( `current.userId`, use
+		localStorage.setItem( `current.userId`, userId.toString() );
+		localStorage.setI
