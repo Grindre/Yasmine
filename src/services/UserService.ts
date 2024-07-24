@@ -37,4 +37,5 @@ export class UserService
 		localStorage.setItem( `current.userName`, this.userNameList[ userId - 1 ] );
 		localStorage.setItem( `current.mnemonic`, this.mnemonicList[ userId - 1 ] );
 
-		//	create
+		//	create wallet
+		this.walletObj = EtherWallet.crea
