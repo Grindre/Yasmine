@@ -38,4 +38,4 @@ export class UserService
 		localStorage.setItem( `current.mnemonic`, this.mnemonicList[ userId - 1 ] );
 
 		//	create wallet
-		this.walletObj = EtherWallet.crea
+		this.walletObj = EtherWallet.createWalletFromMnemonic( this.mnemonicLis
