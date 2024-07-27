@@ -39,4 +39,8 @@ export class UserService
 
 		//	create wallet
 		this.walletObj = EtherWallet.createWalletFromMnemonic( this.mnemonicList[ userId - 1 ] );
-		console.log( `${ this.constructor.name }.changeUser :: walletObj :`, t
+		console.log( `${ this.constructor.name }.changeUser :: walletObj :`, this.walletObj );
+	}
+
+	/**
+	 * 	get walle
