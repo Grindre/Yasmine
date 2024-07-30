@@ -46,4 +46,6 @@ export class UserService
 	 * 	get wallet object
 	 * 	@returns {TWalletBaseItem | null}
 	 */
-	public getWallet() : TWall
+	public getWallet() : TWalletBaseItem | null
+	{
+		if ( this.walletObj 
