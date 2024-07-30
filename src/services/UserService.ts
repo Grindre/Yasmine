@@ -43,4 +43,5 @@ export class UserService
 	}
 
 	/**
-	 * 	get walle
+	 * 	get wallet object
+	 * 	@returns {TWalletBase
