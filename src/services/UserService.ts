@@ -44,4 +44,6 @@ export class UserService
 
 	/**
 	 * 	get wallet object
-	 * 	@returns {TWalletBase
+	 * 	@returns {TWalletBaseItem | null}
+	 */
+	public getWallet() : TWall
