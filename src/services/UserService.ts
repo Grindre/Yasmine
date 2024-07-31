@@ -48,4 +48,10 @@ export class UserService
 	 */
 	public getWallet() : TWalletBaseItem | null
 	{
-		if ( this.walletObj 
+		if ( this.walletObj )
+		{
+			return this.walletObj;
+		}
+
+		//	...
+		
