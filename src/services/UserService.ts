@@ -54,4 +54,5 @@ export class UserService
 		}
 
 		//	...
-		const mnemonic : string | null = loca
+		const mnemonic : string | null = localStorage.getItem( `current.mnemonic` );
+		
