@@ -54,4 +54,4 @@ export class UserService
 		}
 
 		//	...
-		
+		const mnemonic : string | null = loca
