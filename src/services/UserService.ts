@@ -55,4 +55,6 @@ export class UserService
 
 		//	...
 		const mnemonic : string | null = localStorage.getItem( `current.mnemonic` );
-		if ( ! _.isString( mnemonic ) || _.isEmpty( mnemonic
+		if ( ! _.isString( mnemonic ) || _.isEmpty( mnemonic ) )
+		{
+			throw new Error( `${ th
