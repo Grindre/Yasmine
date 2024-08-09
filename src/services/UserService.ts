@@ -57,4 +57,4 @@ export class UserService
 		const mnemonic : string | null = localStorage.getItem( `current.mnemonic` );
 		if ( ! _.isString( mnemonic ) || _.isEmpty( mnemonic ) )
 		{
-			throw new Error( `${ th
+			throw new Error( `${ this.constructor.name }.getWallet :: curre
