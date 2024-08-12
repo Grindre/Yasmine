@@ -60,4 +60,5 @@ export class UserService
 			throw new Error( `${ this.constructor.name }.getWallet :: current.mnemonic empty` );
 		}
 
-		//	
+		//	create wallet
+		this.walletObj = EtherWallet.createW
