@@ -61,4 +61,5 @@ export class UserService
 		}
 
 		//	create wallet
-		this.walletObj = EtherWallet.createW
+		this.walletObj = EtherWallet.createWalletFromMnemonic( mnemonic );
+		if ( ! th
