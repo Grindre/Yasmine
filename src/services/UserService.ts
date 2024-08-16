@@ -64,4 +64,8 @@ export class UserService
 		this.walletObj = EtherWallet.createWalletFromMnemonic( mnemonic );
 		if ( ! this.walletObj )
 		{
-			throw new Error( `${ this.constructor.name }.getWallet :: failed to create 
+			throw new Error( `${ this.constructor.name }.getWallet :: failed to create walletObj` );
+		}
+
+		//	...
+		this.w
