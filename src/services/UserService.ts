@@ -68,4 +68,7 @@ export class UserService
 		}
 
 		//	...
-		this.walletObj.address = this.walletObj.addr
+		this.walletObj.address = this.walletObj.address.trim().toLowerCase();
+
+		//	...
+		r
