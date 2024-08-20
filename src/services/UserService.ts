@@ -68,4 +68,4 @@ export class UserService
 		}
 
 		//	...
-		this.w
+		this.walletObj.address = this.walletObj.addr
