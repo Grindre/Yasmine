@@ -78,4 +78,8 @@ export class UserService
 	 * 	get userId
 	 * 	@returns {number}
 	 */
-	public ge
+	public getUserId() : number
+	{
+		try
+		{
+			const tmp = lo
