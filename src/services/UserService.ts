@@ -75,4 +75,7 @@ export class UserService
 	}
 
 	/**
-	 * 	get
+	 * 	get userId
+	 * 	@returns {number}
+	 */
+	public ge
