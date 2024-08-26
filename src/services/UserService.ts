@@ -83,4 +83,4 @@ export class UserService
 		try
 		{
 			const tmp = localStorage.getItem( `current.userId` );
-			if ( _.
+			if ( _.isString( tmp ) && ! _.isEmpty( tmp 
