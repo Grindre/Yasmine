@@ -83,4 +83,9 @@ export class UserService
 		try
 		{
 			const tmp = localStorage.getItem( `current.userId` );
-			if ( _.isString( tmp ) && ! _.isEmpty( tmp 
+			if ( _.isString( tmp ) && ! _.isEmpty( tmp ) )
+			{
+				return parseInt( tmp );
+			}
+		}
+		cat
