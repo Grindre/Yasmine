@@ -88,4 +88,6 @@ export class UserService
 				return parseInt( tmp );
 			}
 		}
-		cat
+		catch ( err )
+		{
+			console.error( `${ thi
