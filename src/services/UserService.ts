@@ -90,4 +90,4 @@ export class UserService
 		}
 		catch ( err )
 		{
-			console.error( `${ thi
+			console.error( `${ this.constructor.name }.getUserId :: failed to get
