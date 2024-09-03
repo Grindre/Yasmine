@@ -90,4 +90,7 @@ export class UserService
 		}
 		catch ( err )
 		{
-			console.error( `${ this.constructor.name }.getUserId :: failed to get
+			console.error( `${ this.constructor.name }.getUserId :: failed to get userId : `, err );
+		}
+
+		//	default 
