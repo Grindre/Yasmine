@@ -93,4 +93,9 @@ export class UserService
 			console.error( `${ this.constructor.name }.getUserId :: failed to get userId : `, err );
 		}
 
-		//	default 
+		//	default to 1
+		return 1;
+	}
+
+	/**
+	 * 	get current us
