@@ -98,4 +98,5 @@ export class UserService
 	}
 
 	/**
-	 * 	get current us
+	 * 	get current username
+	 * 	@returns {string | null}
