@@ -100,3 +100,5 @@ export class UserService
 	/**
 	 * 	get current username
 	 * 	@returns {string | null}
+	 */
+	public getUserName() : string |
