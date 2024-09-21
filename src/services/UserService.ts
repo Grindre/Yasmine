@@ -101,4 +101,8 @@ export class UserService
 	 * 	get current username
 	 * 	@returns {string | null}
 	 */
-	public getUserName() : string |
+	public getUserName() : string | null
+	{
+		try
+		{
+			const tmp = localStor
