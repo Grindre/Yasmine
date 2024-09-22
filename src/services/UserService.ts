@@ -105,4 +105,5 @@ export class UserService
 	{
 		try
 		{
-			const tmp = localStor
+			const tmp = localStorage.getItem( `current.userName` );
+			
