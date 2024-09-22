@@ -106,4 +106,7 @@ export class UserService
 		try
 		{
 			const tmp = localStorage.getItem( `current.userName` );
-			
+			return tmp ? tmp : null;
+		}
+		catch ( err )
+		
