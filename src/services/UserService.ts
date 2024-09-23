@@ -110,4 +110,4 @@ export class UserService
 		}
 		catch ( err )
 		{
-			console.error( `${ this.constructor.
+			console.error( `${ this.constructor.name }.getUserName :: failed to get userName : `, 
