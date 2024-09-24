@@ -117,4 +117,5 @@ export class UserService
 	}
 
 	/**
-	 * 
+	 * 	get current mnemonic
+	 * 	@returns {strin
