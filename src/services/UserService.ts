@@ -125,4 +125,8 @@ export class UserService
 		try
 		{
 			const tmp = localStorage.getItem( `current.mnemonic` );
-			return tmp ? tm
+			return tmp ? tmp : null;
+		}
+		catch ( err )
+		{
+			console.error
