@@ -118,4 +118,6 @@ export class UserService
 
 	/**
 	 * 	get current mnemonic
-	 * 	@returns {strin
+	 * 	@returns {string | null}
+	 */
+	public getMnemonic()
