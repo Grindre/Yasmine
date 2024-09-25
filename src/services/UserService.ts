@@ -129,4 +129,5 @@ export class UserService
 		}
 		catch ( err )
 		{
-			console.error( `${ this.constructor.name }.getMnemo
+			console.error( `${ this.constructor.name }.getMnemonic :: failed to get mnemonic : `, err );
+		
