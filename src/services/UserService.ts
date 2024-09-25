@@ -120,4 +120,8 @@ export class UserService
 	 * 	get current mnemonic
 	 * 	@returns {string | null}
 	 */
-	public getMnemonic()
+	public getMnemonic() : string | null
+	{
+		try
+		{
+			const tmp = localStora
