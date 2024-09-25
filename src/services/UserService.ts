@@ -124,4 +124,5 @@ export class UserService
 	{
 		try
 		{
-			const tmp = localStora
+			const tmp = localStorage.getItem( `current.mnemonic` );
+			return tmp ? tm
