@@ -129,4 +129,4 @@ export class UserService
 		}
 		catch ( err )
 		{
-			console.error
+			console.error( `${ this.constructor.name }.getMnemo
