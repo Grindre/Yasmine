@@ -64,3 +64,25 @@ export class LatestMessageUtil
 					if ( ! chatMessage
 						|| MessageType.USER !== chatMessage.messageType )
 					{
+						//	extract only user type messages
+						continue;
+					}
+
+					if ( null == latestMessage ||
+						chatMessage.timestamp > latestMessage.timestamp )
+					{
+						latestMessage = chatMessage;
+					}
+				}
+			}
+
+			unreadItems.push({
+				roomId: item.channel,
+				unreadCount: item.count,
+				unreadLatestMessage: latestMessage ? latestMessage : undefined
+			})
+		}
+
+		return unreadItems;
+	}
+}
