@@ -10,4 +10,5 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "stri
+    "strict": true,
+    "forceConsistentCasingInFileNames
