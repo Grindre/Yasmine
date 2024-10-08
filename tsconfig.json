@@ -13,4 +13,5 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "modu
+    "module": "esnext",
+    "moduleResolution": "no
