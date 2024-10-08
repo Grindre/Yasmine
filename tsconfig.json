@@ -9,4 +9,5 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "al
+    "allowSyntheticDefaultImports": true,
+    "stri
